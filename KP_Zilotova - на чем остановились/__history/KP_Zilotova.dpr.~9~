@@ -1,0 +1,45 @@
+program KP_Zilotova;
+
+uses
+  Forms,
+  UnitMain in 'UnitMain.pas' {MainForm},
+  UnitClient in 'UnitClient.pas' {Form2},
+  UnitAvto in 'UnitAvto.pas' {Form3},
+  UnitPolis in 'UnitPolis.pas' {Form4},
+  UnitCompany in 'UnitCompany.pas' {Form5},
+  UnitMotor in 'UnitMotor.pas' {Form6},
+  UnitCarcass in 'UnitCarcass.pas' {Form7},
+  UnitManager in 'UnitManager.pas' {Form8},
+  UnitDiagnost in 'UnitDiagnost.pas' {Form9},
+  UnitSpecI in 'UnitSpecI.pas' {Form10},
+  UnitSpecD in 'UnitSpecD.pas' {Form11},
+  UnitRequest in 'UnitRequest.pas' {Form12},
+  UnitLook in 'UnitLook.pas' {Form13},
+  UnitCalc in 'UnitCalc.pas' {Form14},
+  UnitContract in 'UnitContract.pas' {Form15},
+  UnitList in 'UnitList.pas' {Form16},
+  Datamodule in 'Datamodule.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
+  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm12, Form12);
+  Application.CreateForm(TForm13, Form13);
+  Application.CreateForm(TForm14, Form14);
+  Application.CreateForm(TForm15, Form15);
+  Application.CreateForm(TForm16, Form16);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

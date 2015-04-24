@@ -1,0 +1,312 @@
+object Form13: TForm13
+  Left = 0
+  Top = 0
+  Caption = #1054#1089#1084#1086#1090#1088#1099
+  ClientHeight = 330
+  ClientWidth = 581
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnHide = FormHide
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 168
+    Width = 64
+    Height = 13
+    Caption = #1048#1044'_'#1054#1089#1084#1086#1090#1088#1072
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 195
+    Width = 82
+    Height = 13
+    Caption = #1048#1044'_'#1040#1074#1090#1086#1084#1086#1073#1080#1083#1103
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 222
+    Width = 76
+    Height = 13
+    Caption = #1048#1044'_'#1044#1074#1080#1075#1072#1090#1077#1083#1103
+  end
+  object Label4: TLabel
+    Left = 294
+    Top = 173
+    Width = 57
+    Height = 13
+    Caption = #1048#1044'_'#1050#1091#1079#1086#1074#1072
+  end
+  object Label5: TLabel
+    Left = 281
+    Top = 192
+    Width = 70
+    Height = 13
+    Caption = #1055#1086#1074#1088#1077#1078#1076#1077#1085#1080#1103
+  end
+  object Label6: TLabel
+    Left = 276
+    Top = 219
+    Width = 75
+    Height = 13
+    Caption = #1048#1044'_'#1044#1080#1072#1075#1085#1086#1089#1090#1072
+  end
+  object Label7: TLabel
+    Left = 281
+    Top = 246
+    Width = 70
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1086#1089#1084#1086#1090#1088#1072
+  end
+  object DBEdit1: TDBEdit
+    Left = 130
+    Top = 165
+    Width = 119
+    Height = 21
+    DataField = 'LOOKCD'
+    DataSource = LookDataSource
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 31
+    Width = 573
+    Height = 120
+    DataSource = LookDataSource
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 581
+    Height = 25
+    DataSource = LookDataSource
+    Align = alTop
+    TabOrder = 2
+  end
+  object DBEdit5: TDBEdit
+    Left = 357
+    Top = 192
+    Width = 121
+    Height = 21
+    DataField = 'DAMAGED'
+    DataSource = LookDataSource
+    TabOrder = 3
+  end
+  object DBEdit7: TDBEdit
+    Left = 357
+    Top = 246
+    Width = 121
+    Height = 21
+    DataField = 'DATE_LOOK'
+    DataSource = LookDataSource
+    TabOrder = 4
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 130
+    Top = 192
+    Width = 119
+    Height = 21
+    DataField = 'AVTOCD'
+    DataSource = LookDataSource
+    KeyField = 'AVTOCD'
+    ListField = 'MARKACD'
+    ListSource = CarDataSource
+    TabOrder = 5
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 357
+    Top = 165
+    Width = 121
+    Height = 21
+    DataField = 'CARCASSCD'
+    DataSource = LookDataSource
+    KeyField = 'CARCASSCD'
+    ListField = 'CARCASSNM'
+    ListSource = CarcassDataSource
+    TabOrder = 6
+  end
+  object DBLookupComboBox3: TDBLookupComboBox
+    Left = 130
+    Top = 219
+    Width = 119
+    Height = 21
+    DataField = 'MOTORCD'
+    DataSource = LookDataSource
+    KeyField = 'MOTORCD'
+    ListField = 'MOTORNM'
+    ListSource = MotorDataSource
+    TabOrder = 7
+  end
+  object DBLookupComboBox4: TDBLookupComboBox
+    Left = 357
+    Top = 219
+    Width = 121
+    Height = 21
+    DataField = 'DIAGNOSTCD'
+    DataSource = LookDataSource
+    KeyField = 'DIAGNOSTCD'
+    ListField = 'FIO_DIAGNOST'
+    ListSource = DiagnostDataSource
+    TabOrder = 8
+  end
+  object LookDataSource: TDataSource
+    DataSet = LookTable
+    Left = 264
+    Top = 160
+  end
+  object LookTable: TTable
+    Active = True
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'INSPECTION'
+    Left = 256
+    Top = 192
+    object LookTableLOOKCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1054#1089#1084#1086#1090#1088#1072
+      DisplayWidth = 16
+      FieldName = 'LOOKCD'
+      Required = True
+    end
+    object LookTable_: TStringField
+      DisplayWidth = 18
+      FieldKind = fkLookup
+      FieldName = #1048#1044'_'#1040#1074#1090#1086#1084#1086#1073#1080#1083#1103
+      LookupDataSet = CarTable
+      LookupKeyFields = 'AVTOCD'
+      LookupResultField = 'MARKACD'
+      KeyFields = 'AVTOCD'
+      Size = 30
+      Lookup = True
+    end
+    object LookTableAVTOCD: TStringField
+      DisplayLabel = #1048#1044'_'#1040#1074#1090#1086#1084#1086#1073#1080#1083#1103
+      DisplayWidth = 17
+      FieldName = 'AVTOCD'
+      Required = True
+      Visible = False
+      Size = 9
+    end
+    object LookTable_2: TStringField
+      DisplayWidth = 18
+      FieldKind = fkLookup
+      FieldName = #1048#1044'_'#1044#1074#1080#1075#1072#1090#1077#1083#1103
+      LookupDataSet = MotorTable
+      LookupKeyFields = 'MOTORCD'
+      LookupResultField = 'MOTORNM'
+      KeyFields = 'MOTORCD'
+      Size = 30
+      Lookup = True
+    end
+    object LookTableMOTORCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1044#1074#1080#1075#1072#1090#1077#1083#1103
+      DisplayWidth = 15
+      FieldName = 'MOTORCD'
+      Required = True
+      Visible = False
+    end
+    object LookTable_3: TStringField
+      DisplayWidth = 16
+      FieldKind = fkLookup
+      FieldName = #1048#1044'_'#1050#1091#1079#1086#1074#1072
+      LookupDataSet = CarcassTable
+      LookupKeyFields = 'CARCASSCD'
+      LookupResultField = 'CARCASSNM'
+      KeyFields = 'CARCASSCD'
+      Size = 30
+      Lookup = True
+    end
+    object LookTableCARCASSCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1050#1091#1079#1086#1074#1072
+      DisplayWidth = 12
+      FieldName = 'CARCASSCD'
+      Required = True
+      Visible = False
+    end
+    object LookTableDAMAGED: TSmallintField
+      DisplayLabel = #1055#1086#1074#1088#1077#1078#1076#1077#1085#1080#1103
+      DisplayWidth = 17
+      FieldName = 'DAMAGED'
+    end
+    object LookTable_4: TStringField
+      FieldKind = fkLookup
+      FieldName = #1048#1044'_'#1044#1080#1072#1075#1085#1086#1089#1090#1072
+      LookupDataSet = DiagnostTable
+      LookupKeyFields = 'DIAGNOSTCD'
+      LookupResultField = 'FIO_DIAGNOST'
+      KeyFields = 'DIAGNOSTCD'
+      Size = 30
+      Lookup = True
+    end
+    object LookTableDIAGNOSTCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1044#1080#1072#1075#1085#1086#1089#1090#1072
+      DisplayWidth = 18
+      FieldName = 'DIAGNOSTCD'
+      Required = True
+      Visible = False
+    end
+    object LookTableDATE_LOOK: TDateField
+      DisplayLabel = #1044#1072#1090#1072' '#1086#1089#1084#1086#1090#1088#1072
+      DisplayWidth = 17
+      FieldName = 'DATE_LOOK'
+    end
+  end
+  object CarTable: TTable
+    Active = True
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'CAR'
+    Left = 8
+    Top = 296
+  end
+  object CarDataSource: TDataSource
+    DataSet = CarTable
+    Left = 48
+    Top = 296
+  end
+  object CarcassTable: TTable
+    Active = True
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'CARCASS'
+    Left = 120
+    Top = 296
+  end
+  object CarcassDataSource: TDataSource
+    DataSet = CarcassTable
+    Left = 160
+    Top = 296
+  end
+  object MotorTable: TTable
+    Active = True
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'MOTOR'
+    Left = 240
+    Top = 296
+  end
+  object MotorDataSource: TDataSource
+    DataSet = MotorTable
+    Left = 280
+    Top = 296
+  end
+  object DiagnostTable: TTable
+    Active = True
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'DIAGNOST'
+    Left = 352
+    Top = 296
+  end
+  object DiagnostDataSource: TDataSource
+    DataSet = DiagnostTable
+    Left = 392
+    Top = 296
+  end
+end

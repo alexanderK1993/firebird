@@ -1,0 +1,59 @@
+object FLicaFonda: TFLicaFonda
+  Left = 0
+  Top = 0
+  Caption = 'FLicaFonda'
+  ClientHeight = 247
+  ClientWidth = 480
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 40
+    Top = 80
+    Width = 320
+    Height = 120
+    DataSource = DataSourceLicaFonda
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'DATA_BIRTH_LICA'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ADRES_LICA'
+        Visible = True
+      end>
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 49
+    Width = 470
+    Height = 25
+    DataSource = DataSourceLicaFonda
+    TabOrder = 1
+  end
+  object TableLicaFonda: TTable
+    DatabaseName = 'nashchekin'
+    TableName = 'LICA_FONDA'
+    Left = 8
+    Top = 8
+  end
+  object DataSourceLicaFonda: TDataSource
+    DataSet = TableLicaFonda
+    Left = 40
+    Top = 8
+  end
+end

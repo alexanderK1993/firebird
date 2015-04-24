@@ -1,0 +1,50 @@
+unit Unit13;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TForm13 = class(TForm)
+    DBEdit1: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    LookDataSource: TDataSource;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    LookTable: TTable;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    DBEdit5: TDBEdit;
+    DBEdit7: TDBEdit;
+    CarTable: TTable;
+    CarDataSource: TDataSource;
+    CarcassTable: TTable;
+    CarcassDataSource: TDataSource;
+    MotorTable: TTable;
+    MotorDataSource: TDataSource;
+    DiagnostTable: TTable;
+    DiagnostDataSource: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    DBLookupComboBox2: TDBLookupComboBox;
+    DBLookupComboBox3: TDBLookupComboBox;
+    DBLookupComboBox4: TDBLookupComboBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form13: TForm13;
+
+implementation
+
+{$R *.dfm}
+
+end.

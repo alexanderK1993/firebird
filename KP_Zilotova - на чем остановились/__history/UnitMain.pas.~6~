@@ -1,0 +1,147 @@
+unit UnitMain;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes,
+   Graphics, Controls, Forms,
+  Dialogs, Menus, DB, DBTables, UnitClient, UnitAvto,
+   UnitPolis,UnitCompany,UnitMotor,
+  UnitCarcass,UnitManager,UnitDiagnost, UnitSpecI, UnitSpecD,
+  UnitRequest,UnitLook,UnitCalc,
+  UnitContract,UnitList, StdCtrls ,UnitLicaFonda;
+
+type
+  TMainForm = class(TForm)
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    N10: TMenuItem;
+    N11: TMenuItem;
+    N12: TMenuItem;
+    N13: TMenuItem;
+    N14: TMenuItem;
+    N15: TMenuItem;
+    N16: TMenuItem;
+    N17: TMenuItem;
+    N18: TMenuItem;
+    Database1: TDatabase;
+    Label1: TLabel;
+    Button1: TButton;
+    procedure miClientClick(Sender: TObject);
+    procedure miCarClick(Sender: TObject);
+    procedure miPolisClick(Sender: TObject);
+    procedure miCompanyClick(Sender: TObject);
+    procedure miMotorClick(Sender: TObject);
+    procedure miCarcassClick(Sender: TObject);
+    procedure miManagerClick(Sender: TObject);
+    procedure miDiagnostClick(Sender: TObject);
+    procedure miSpecInsClick(Sender: TObject);
+    procedure miSpecDogClick(Sender: TObject);
+    procedure miRequestClick(Sender: TObject);
+    procedure miLookClick(Sender: TObject);
+    procedure miCalcClick(Sender: TObject);
+    procedure miContractClick(Sender: TObject);
+    procedure miReportClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMainForm.Button1Click(Sender: TObject);
+begin
+   TForm1.Show();
+end;
+
+procedure TMainForm.miCalcClick(Sender: TObject);
+begin
+FCalculator.Show();
+end;
+
+procedure TMainForm.miCarcassClick(Sender: TObject);
+begin
+FCarcass.Show();
+end;
+
+procedure TMainForm.miCarClick(Sender: TObject);
+begin
+FCar.Show();
+end;
+
+procedure TMainForm.miClientClick(Sender: TObject);
+begin
+FClient.Show();
+end;
+
+procedure TMainForm.miCompanyClick(Sender: TObject);
+begin
+FCompany.Show();
+end;
+
+procedure TMainForm.miContractClick(Sender: TObject);
+begin
+FContract.Show();
+end;
+
+procedure TMainForm.miDiagnostClick(Sender: TObject);
+begin
+FDiagnost.Show();
+end;
+
+procedure TMainForm.miLookClick(Sender: TObject);
+begin
+FInspection.Show();
+end;
+
+procedure TMainForm.miManagerClick(Sender: TObject);
+begin
+FManager.Show();
+end;
+
+procedure TMainForm.miMotorClick(Sender: TObject);
+begin
+FMotor.Show();
+end;
+
+procedure TMainForm.miPolisClick(Sender: TObject);
+begin
+FPolis.Show();
+end;
+
+procedure TMainForm.miReportClick(Sender: TObject);
+begin
+OtchetForm.Show();
+end;
+
+procedure TMainForm.miRequestClick(Sender: TObject);
+begin
+FRequest.Show();
+end;
+
+procedure TMainForm.miSpecDogClick(Sender: TObject);
+begin
+FormSpecD.Show();
+end;
+
+procedure TMainForm.miSpecInsClick(Sender: TObject);
+begin
+  FormSpecI.Show();
+end;
+
+end.

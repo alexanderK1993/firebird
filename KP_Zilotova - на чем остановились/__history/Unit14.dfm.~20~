@@ -1,0 +1,267 @@
+object Form14: TForm14
+  Left = 0
+  Top = 0
+  Caption = #1056#1072#1089#1095#1077#1090#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
+  ClientHeight = 342
+  ClientWidth = 994
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnHide = FormHide
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 179
+    Width = 118
+    Height = 13
+    Caption = #1048#1044'_'#1056#1072#1089#1095#1077#1090#1085#1099#1093' '#1076#1072#1085#1085#1099#1093
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 214
+    Width = 57
+    Height = 13
+    Caption = #1048#1044'_'#1047#1072#1103#1074#1082#1080
+  end
+  object Label3: TLabel
+    Left = 304
+    Top = 179
+    Width = 127
+    Height = 13
+    Caption = #1048#1044'_'#1057#1090#1088#1072#1093#1086#1074#1086#1081' '#1082#1086#1084#1087#1072#1085#1080#1080
+  end
+  object Label4: TLabel
+    Left = 304
+    Top = 214
+    Width = 82
+    Height = 13
+    Caption = #1062#1077#1085#1072' '#1089#1090#1088#1072#1093#1086#1074#1082#1080
+  end
+  object Label5: TLabel
+    Left = 24
+    Top = 251
+    Width = 57
+    Height = 13
+    Caption = #1048#1044'_'#1055#1086#1083#1080#1089#1072
+  end
+  object Label6: TLabel
+    Left = 304
+    Top = 251
+    Width = 67
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1086#1087#1083#1072#1090#1099
+  end
+  object Label7: TLabel
+    Left = 221
+    Top = 283
+    Width = 173
+    Height = 13
+    Caption = #1048#1044'_'#1057#1087#1077#1094#1080#1072#1083#1080#1089#1090#1072' '#1087#1086' '#1089#1090#1088#1072#1093#1086#1074#1072#1085#1080#1102
+  end
+  object DBEdit1: TDBEdit
+    Left = 144
+    Top = 176
+    Width = 121
+    Height = 21
+    DataField = 'CALCULATORCD'
+    DataSource = CalcDataSource
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 31
+    Width = 978
+    Height = 120
+    DataSource = CalcDataSource
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 994
+    Height = 25
+    DataSource = CalcDataSource
+    Align = alTop
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 437
+    Top = 211
+    Width = 108
+    Height = 21
+    DataField = 'PRICE_INSURANCE'
+    DataSource = CalcDataSource
+    TabOrder = 3
+  end
+  object DBEdit6: TDBEdit
+    Left = 437
+    Top = 248
+    Width = 108
+    Height = 21
+    DataField = 'DATE_PAY'
+    DataSource = CalcDataSource
+    TabOrder = 4
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 144
+    Top = 211
+    Width = 121
+    Height = 21
+    DataField = 'REQUESTCD'
+    DataSource = CalcDataSource
+    KeyField = 'REQUESTCD'
+    ListField = 'REQUESTCD'
+    ListSource = RequestDataSource
+    TabOrder = 5
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 144
+    Top = 248
+    Width = 121
+    Height = 21
+    DataField = 'POLISCD'
+    DataSource = CalcDataSource
+    KeyField = 'POLISCD'
+    ListField = 'POLISNM'
+    ListSource = PolisDataSource
+    TabOrder = 6
+  end
+  object DBLookupComboBox3: TDBLookupComboBox
+    Left = 437
+    Top = 176
+    Width = 108
+    Height = 21
+    DataField = 'COMPANYCD'
+    DataSource = CalcDataSource
+    KeyField = 'COMPANYCD'
+    ListField = 'COMPANYNM'
+    ListSource = CompanyDataSource
+    TabOrder = 7
+  end
+  object DBLookupComboBox4: TDBLookupComboBox
+    Left = 400
+    Top = 283
+    Width = 145
+    Height = 21
+    DataField = 'SPECSTRCD'
+    DataSource = CalcDataSource
+    KeyField = 'SPECSTRCD'
+    ListField = 'FIO_SPECSTR'
+    ListSource = SpecInsDataSource
+    TabOrder = 8
+  end
+  object CalcDataSource: TDataSource
+    DataSet = CalcTable
+    Left = 272
+    Top = 176
+  end
+  object CalcTable: TTable
+    OnCalcFields = TableOnCalcFields
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'CALCULATOR'
+    Left = 272
+    Top = 208
+    object CalcTableCALCULATORCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1056#1072#1089#1095#1077#1090#1085#1099#1093' '#1076#1072#1085#1085#1099#1093
+      DisplayWidth = 25
+      FieldName = 'CALCULATORCD'
+      Required = True
+    end
+    object CalcTableREQUESTCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1047#1072#1103#1074#1082#1080
+      DisplayWidth = 12
+      FieldName = 'REQUESTCD'
+      Required = True
+    end
+    object CalcTablePOLISCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1055#1086#1083#1080#1089#1072
+      DisplayWidth = 12
+      FieldName = 'POLISCD'
+      Required = True
+    end
+    object CalcTableCOMPANYCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1057#1090#1088#1072#1093#1086#1074#1086#1081' '#1082#1086#1084#1087#1072#1085#1080#1080
+      DisplayWidth = 26
+      FieldName = 'COMPANYCD'
+      Required = True
+    end
+    object CalcTablePRICE_INSURANCE: TFloatField
+      DisplayLabel = #1062#1077#1085#1072' '#1089#1090#1088#1072#1093#1086#1074#1082#1080
+      DisplayWidth = 17
+      FieldName = 'PRICE_INSURANCE'
+    end
+    object CalcTableDATE_PAY: TDateField
+      DisplayLabel = #1044#1072#1090#1072' '#1086#1087#1083#1072#1090#1099
+      DisplayWidth = 14
+      FieldName = 'DATE_PAY'
+    end
+    object CalcTableSPECSTRCD: TIntegerField
+      DisplayLabel = #1048#1044'_'#1057#1087#1077#1094#1080#1072#1083#1080#1089#1090#1072' '#1087#1086' '#1089#1090#1088#1072#1093#1086#1074#1072#1085#1080#1102
+      DisplayWidth = 28
+      FieldName = 'SPECSTRCD'
+      Required = True
+    end
+    object CalcTableINCOME: TFloatField
+      DisplayLabel = #1044#1086#1093#1086#1076
+      DisplayWidth = 18
+      FieldKind = fkCalculated
+      FieldName = 'INCOME'
+      Calculated = True
+    end
+  end
+  object RequestTable: TTable
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'REQUEST'
+    Left = 8
+    Top = 312
+  end
+  object RequestDataSource: TDataSource
+    DataSet = RequestTable
+    Left = 40
+    Top = 312
+  end
+  object PolisTable: TTable
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'POLIS'
+    Left = 88
+    Top = 312
+  end
+  object PolisDataSource: TDataSource
+    DataSet = PolisTable
+    Left = 120
+    Top = 312
+  end
+  object CompanyTable: TTable
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'COMPANY'
+    Left = 168
+    Top = 312
+  end
+  object CompanyDataSource: TDataSource
+    DataSet = CompanyTable
+    Left = 200
+    Top = 312
+  end
+  object SpecInsTable: TTable
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'PERSONAL_INSURANCE'
+    Left = 240
+    Top = 312
+  end
+  object SpecInsDataSource: TDataSource
+    DataSet = SpecInsTable
+    Left = 272
+    Top = 312
+  end
+end

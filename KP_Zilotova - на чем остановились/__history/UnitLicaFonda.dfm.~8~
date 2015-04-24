@@ -1,0 +1,103 @@
+object FLicaFonda: TFLicaFonda
+  Left = 0
+  Top = 0
+  Caption = #1051#1080#1094#1072' '#1092#1086#1085#1076#1072
+  ClientHeight = 142
+  ClientWidth = 471
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 2
+    Top = 24
+    Width = 470
+    Height = 120
+    DataSource = DataSourceLicaFonda
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 2
+    Top = 1
+    Width = 470
+    Height = 25
+    DataSource = DataSourceLicaFonda
+    TabOrder = 1
+  end
+  object TableLicaFonda: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    FieldDefs = <
+      item
+        Name = 'ID '#1083#1080#1094#1072
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'FIO_LICA'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'DATA_PRIN_WORK'
+        DataType = ftDate
+      end
+      item
+        Name = 'ADRES_LICA'
+        DataType = ftString
+        Size = 30
+      end
+      item
+        Name = 'TEL_LICA'
+        DataType = ftString
+        Size = 15
+      end
+      item
+        Name = 'DATA_BIRTH_LICA'
+        DataType = ftDate
+      end
+      item
+        Name = 'ID_ZAYAVKI'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'ID_FIRMA'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end>
+    IndexDefs = <
+      item
+        Name = 'RDB$PRIMARY21'
+        Fields = 'ID_LICA'
+        Options = [ixUnique]
+      end
+      item
+        Name = 'RDB$FOREIGN22'
+        Fields = 'ID_ZAYAVKI'
+      end
+      item
+        Name = 'RDB$FOREIGN23'
+        Fields = 'ID_FIRMA'
+      end>
+    StoreDefs = True
+    TableName = 'LICA_FONDA'
+    Left = 56
+    Top = 144
+  end
+  object DataSourceLicaFonda: TDataSource
+    DataSet = TableLicaFonda
+    Left = 88
+    Top = 144
+  end
+end

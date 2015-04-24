@@ -1,0 +1,192 @@
+object Form15: TForm15
+  Left = 0
+  Top = 0
+  Caption = #1044#1086#1075#1086#1074#1086#1088#1072
+  ClientHeight = 316
+  ClientWidth = 519
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 179
+    Width = 70
+    Height = 13
+    Caption = #1048#1044'_'#1044#1086#1075#1086#1074#1086#1088#1072
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 214
+    Width = 118
+    Height = 13
+    Caption = #1048#1044'_'#1056#1072#1089#1095#1077#1090#1085#1099#1093' '#1076#1072#1085#1085#1099#1093
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 251
+    Width = 64
+    Height = 13
+    Caption = #1048#1044'_'#1054#1089#1084#1086#1090#1088#1072
+  end
+  object Label4: TLabel
+    Left = 239
+    Top = 179
+    Width = 142
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1079#1072#1082#1083#1102#1095#1077#1085#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
+  end
+  object Label5: TLabel
+    Left = 239
+    Top = 214
+    Width = 159
+    Height = 13
+    Caption = #1048#1044'_'#1057#1087#1077#1094#1080#1072#1083#1080#1089#1090#1072' '#1087#1086' '#1076#1086#1075#1086#1074#1086#1088#1072#1084
+  end
+  object Label6: TLabel
+    Left = 239
+    Top = 251
+    Width = 134
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
+  end
+  object DBEdit1: TDBEdit
+    Left = 112
+    Top = 176
+    Width = 121
+    Height = 21
+    DataField = 'CONTRACTCD'
+    DataSource = ContractDataSource
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 31
+    Width = 489
+    Height = 120
+    DataSource = ContractDataSource
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 519
+    Height = 25
+    DataSource = ContractDataSource
+    Align = alTop
+    TabOrder = 2
+    ExplicitWidth = 520
+  end
+  object DBEdit4: TDBEdit
+    Left = 387
+    Top = 176
+    Width = 121
+    Height = 21
+    DataField = 'DATE_CONTRACT'
+    DataSource = ContractDataSource
+    TabOrder = 3
+  end
+  object DBEdit6: TDBEdit
+    Left = 387
+    Top = 248
+    Width = 113
+    Height = 21
+    DataField = 'DATE_FINISH'
+    DataSource = ContractDataSource
+    TabOrder = 4
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 132
+    Top = 214
+    Width = 101
+    Height = 21
+    DataField = 'CALCULATORCD'
+    DataSource = ContractDataSource
+    KeyField = 'CALCULATORCD'
+    ListField = 'CALCULATORCD'
+    ListSource = CalcDataSource
+    TabOrder = 5
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 112
+    Top = 251
+    Width = 121
+    Height = 21
+    DataField = 'LOOKCD'
+    DataSource = ContractDataSource
+    KeyField = 'LOOKCD'
+    ListField = 'LOOKCD'
+    ListSource = LookDataSource
+    TabOrder = 6
+  end
+  object DBLookupComboBox3: TDBLookupComboBox
+    Left = 404
+    Top = 214
+    Width = 104
+    Height = 21
+    DataField = 'SPECDOGCD'
+    DataSource = ContractDataSource
+    KeyField = 'SPECDOGCD'
+    ListField = 'FIO_SPECDOG'
+    ListSource = SpecDogDataSource
+    TabOrder = 7
+  end
+  object ContractDataSource: TDataSource
+    DataSet = ContractTable
+    Left = 184
+    Top = 152
+  end
+  object ContractTable: TTable
+    Active = True
+    DatabaseName = 'Zilotova_Driver'
+    TableName = 'CONTRACT'
+    Left = 216
+    Top = 144
+  end
+  object CalcTable: TTable
+    Active = True
+    DatabaseName = 'Zilotova_Driver'
+    TableName = 'CALCULATOR'
+    Left = 8
+    Top = 280
+  end
+  object CalcDataSource: TDataSource
+    DataSet = CalcTable
+    Left = 40
+    Top = 280
+  end
+  object LookTable: TTable
+    Active = True
+    DatabaseName = 'Zilotova_Driver'
+    TableName = 'INSPECTION'
+    Left = 96
+    Top = 280
+  end
+  object LookDataSource: TDataSource
+    DataSet = LookTable
+    Left = 128
+    Top = 280
+  end
+  object SpecDogTable: TTable
+    Active = True
+    DatabaseName = 'Zilotova_Driver'
+    TableName = 'PERSONAL_CONTRACT'
+    Left = 176
+    Top = 280
+  end
+  object SpecDogDataSource: TDataSource
+    DataSet = SpecDogTable
+    Left = 208
+    Top = 280
+  end
+end

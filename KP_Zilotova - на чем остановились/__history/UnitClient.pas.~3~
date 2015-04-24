@@ -1,0 +1,59 @@
+unit UnitClient;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, DBGrids, DB, DBTables, ExtCtrls, DBCtrls, StdCtrls, Mask;
+
+type
+  TFClient = class(TForm)
+    DBGrid1: TDBGrid;
+    ClientTable: TTable;
+    ClientDataSource: TDataSource;
+    DBEdit1: TDBEdit;
+    DBNavigator1: TDBNavigator;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit5: TDBEdit;
+    DBEdit6: TDBEdit;
+    DBEdit7: TDBEdit;
+    DBEdit8: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    DBEdit9: TDBEdit;
+    Label9: TLabel;
+    DBEdit10: TDBEdit;
+    Label10: TLabel;
+    ClientTableCLIENTCD: TIntegerField;
+    ClientTableFIO_CLIENT: TStringField;
+    ClientTablePHONE: TStringField;
+    ClientTableDATE_PRAVA: TDateField;
+    ClientTableDATE_BIRTH: TDateField;
+    ClientTableCITY: TStringField;
+    ClientTableSTREET: TStringField;
+    ClientTableHOUSE: TIntegerField;
+    ClientTableKORPUS: TStringField;
+    ClientTableFLAT: TIntegerField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FClient: TFClient;
+
+implementation
+
+{$R *.dfm}
+
+
+end.

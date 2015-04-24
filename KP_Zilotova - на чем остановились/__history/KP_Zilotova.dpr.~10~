@@ -1,0 +1,45 @@
+program KP_Zilotova;
+
+uses
+  Forms,
+  UnitMain in 'UnitMain.pas' {MainForm},
+  UnitClient in 'UnitClient.pas' {FClient},
+  UnitAvto in 'UnitAvto.pas' {FCar},
+  UnitPolis in 'UnitPolis.pas' {FPolis},
+  UnitCompany in 'UnitCompany.pas' {FCompany},
+  UnitMotor in 'UnitMotor.pas' {FMotor},
+  UnitCarcass in 'UnitCarcass.pas' {FCarcass},
+  UnitManager in 'UnitManager.pas' {FManager},
+  UnitDiagnost in 'UnitDiagnost.pas' {FDiagnost},
+  UnitSpecI in 'UnitSpecI.pas' {FormSpecI},
+  UnitSpecD in 'UnitSpecD.pas' {FormSpecD},
+  UnitRequest in 'UnitRequest.pas' {FRequest},
+  UnitLook in 'UnitLook.pas' {FInspection},
+  UnitCalc in 'UnitCalc.pas' {FCalculator},
+  UnitContract in 'UnitContract.pas' {FContract},
+  UnitList in 'UnitList.pas' {OtchetForm},
+  Datamodule in 'Datamodule.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TFClient, FClient);
+  Application.CreateForm(TFCar, FCar);
+  Application.CreateForm(TFPolis, FPolis);
+  Application.CreateForm(TFCompany, FCompany);
+  Application.CreateForm(TFMotor, FMotor);
+  Application.CreateForm(TFCarcass, FCarcass);
+  Application.CreateForm(TFManager, FManager);
+  Application.CreateForm(TFDiagnost, FDiagnost);
+  Application.CreateForm(TFormSpecI, FormSpecI);
+  Application.CreateForm(TFormSpecD, FormSpecD);
+  Application.CreateForm(TFRequest, FRequest);
+  Application.CreateForm(TFInspection, FInspection);
+  Application.CreateForm(TFCalculator, FCalculator);
+  Application.CreateForm(TFContract, FContract);
+  Application.CreateForm(TOtchetForm, OtchetForm);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

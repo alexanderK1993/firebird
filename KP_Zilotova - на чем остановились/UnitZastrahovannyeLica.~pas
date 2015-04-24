@@ -1,0 +1,24 @@
+unit UnitZastrahovannyeLica;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TFZastrahovanyeLica = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FZastrahovanyeLica: TFZastrahovanyeLica;
+
+implementation
+
+{$R *.dfm}
+
+end.

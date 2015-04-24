@@ -1,0 +1,65 @@
+unit UnitContract;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TFContract = class(TForm)
+    ContractDataSource: TDataSource;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    ContractTable: TTable;
+    CalcTable: TTable;
+    CalcDataSource: TDataSource;
+    LookTable: TTable;
+    LookDataSource: TDataSource;
+    SpecDogTable: TTable;
+    SpecDogDataSource: TDataSource;
+    ContractTableCONTRACTCD: TIntegerField;
+    ContractTableCALCULATORCD: TIntegerField;
+    ContractTableLOOKCD: TIntegerField;
+    ContractTableDATE_CONTRACT: TDateField;
+    ContractTableSPECDOGCD: TIntegerField;
+    ContractTableDATE_FINISH: TDateField;
+    ContractTable_: TIntegerField;
+    ContractTable_2: TIntegerField;
+    ContractTableField: TStringField;
+    DBNavigator2: TDBNavigator;
+    DBGrid2: TDBGrid;
+    DBNavigator3: TDBNavigator;
+    DBGrid3: TDBGrid;
+    procedure FormShow(Sender: TObject);
+    procedure FormHide(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FContract: TFContract;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFContract.FormHide(Sender: TObject);
+begin
+CalcTable.Close();
+LookTable.Close();
+SpecDogTable.Close();
+ContractTable.Close();
+end;
+
+procedure TFContract.FormShow(Sender: TObject);
+begin
+CalcTable.Open();
+LookTable.Open();
+SpecDogTable.Open();
+ContractTable.Open();
+end;
+
+end.

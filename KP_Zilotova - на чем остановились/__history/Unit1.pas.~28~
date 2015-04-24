@@ -1,0 +1,129 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, DB, DBTables, Unit2,Unit3,Unit4,Unit5,
+  Unit6,Unit7,Unit8, Unit9,Unit10,Unit11,Unit12,Unit13,
+  Unit14,Unit15,Unit16 ;
+
+type
+  TMainForm = class(TForm)
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    N10: TMenuItem;
+    N11: TMenuItem;
+    N12: TMenuItem;
+    N13: TMenuItem;
+    N14: TMenuItem;
+    N15: TMenuItem;
+    N16: TMenuItem;
+    N17: TMenuItem;
+    N18: TMenuItem;
+    procedure miClientClick(Sender: TObject);
+    procedure miCarClick(Sender: TObject);
+    procedure miPolisClick(Sender: TObject);
+    procedure miCompanyClick(Sender: TObject);
+    procedure miMotorClick(Sender: TObject);
+    procedure miCarcassClick(Sender: TObject);
+    procedure miManagerClick(Sender: TObject);
+    procedure miDiagnostClick(Sender: TObject);
+    procedure miSpecInsClick(Sender: TObject);
+    procedure miSpecDogClick(Sender: TObject);
+    procedure miRequestClick(Sender: TObject);
+    procedure miLookClick(Sender: TObject);
+    procedure miCalcClick(Sender: TObject);
+    procedure miContractClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMainForm.miCalcClick(Sender: TObject);
+begin
+Form14.Show();
+end;
+
+procedure TMainForm.miCarcassClick(Sender: TObject);
+begin
+Form7.Show();
+end;
+
+procedure TMainForm.miCarClick(Sender: TObject);
+begin
+Form3.Show();
+end;
+
+procedure TMainForm.miClientClick(Sender: TObject);
+begin
+Form2.Show();
+end;
+
+procedure TMainForm.miCompanyClick(Sender: TObject);
+begin
+Form5.Show();
+end;
+
+procedure TMainForm.miContractClick(Sender: TObject);
+begin
+Form15.Show();
+end;
+
+procedure TMainForm.miDiagnostClick(Sender: TObject);
+begin
+Form9.Show();
+end;
+
+procedure TMainForm.miLookClick(Sender: TObject);
+begin
+Form13.Show();
+end;
+
+procedure TMainForm.miManagerClick(Sender: TObject);
+begin
+Form8.Show();
+end;
+
+procedure TMainForm.miMotorClick(Sender: TObject);
+begin
+Form6.Show();
+end;
+
+procedure TMainForm.miPolisClick(Sender: TObject);
+begin
+Form4.Show();
+end;
+
+procedure TMainForm.miRequestClick(Sender: TObject);
+begin
+Form12.Show();
+end;
+
+procedure TMainForm.miSpecDogClick(Sender: TObject);
+begin
+Form14.Show();
+end;
+
+procedure TMainForm.miSpecInsClick(Sender: TObject);
+begin
+  Form10.Show();
+end;
+
+end.

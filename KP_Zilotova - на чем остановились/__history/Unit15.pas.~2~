@@ -1,0 +1,40 @@
+unit Unit15;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TForm15 = class(TForm)
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    Table1: TTable;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    DBEdit5: TDBEdit;
+    DBEdit6: TDBEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form15: TForm15;
+
+implementation
+
+{$R *.dfm}
+
+end.

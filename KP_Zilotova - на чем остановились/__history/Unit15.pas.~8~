@@ -1,0 +1,70 @@
+unit Unit15;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TForm15 = class(TForm)
+    DBEdit1: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    ContractDataSource: TDataSource;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    ContractTable: TTable;
+    DBEdit4: TDBEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    DBEdit6: TDBEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    CalcTable: TTable;
+    CalcDataSource: TDataSource;
+    LookTable: TTable;
+    LookDataSource: TDataSource;
+    SpecDogTable: TTable;
+    SpecDogDataSource: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    DBLookupComboBox2: TDBLookupComboBox;
+    DBLookupComboBox3: TDBLookupComboBox;
+    ContractTableCONTRACTCD: TIntegerField;
+    ContractTableCALCULATORCD: TIntegerField;
+    ContractTableLOOKCD: TIntegerField;
+    ContractTableDATE_CONTRACT: TDateField;
+    ContractTableSPECDOGCD: TIntegerField;
+    ContractTableDATE_FINISH: TDateField;
+    procedure FormShow(Sender: TObject);
+    procedure FormHide(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form15: TForm15;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm15.FormHide(Sender: TObject);
+begin
+CalcTable.Close();
+LookTable.Close();
+SpecDogTable.Close();
+ContractTable.Close();
+end;
+
+procedure TForm15.FormShow(Sender: TObject);
+begin
+CalcTable.Open();
+LookTable.Open();
+SpecDogTable.Open();
+ContractTable.Open();
+end;
+
+end.

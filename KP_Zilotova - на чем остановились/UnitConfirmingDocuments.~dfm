@@ -1,0 +1,49 @@
+object FConfirmDocuments: TFConfirmDocuments
+  Left = 0
+  Top = 0
+  Caption = #1055#1086#1076#1090#1074#1077#1088#1078#1076#1077#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
+  ClientHeight = 200
+  ClientWidth = 619
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = -1
+    Top = 24
+    Width = 621
+    Height = 177
+    DataSource = DataSourceConfirmingDocuments
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 1
+    Width = 620
+    Height = 25
+    DataSource = DataSourceConfirmingDocuments
+    TabOrder = 1
+  end
+  object TableConfirmingDocuments: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    TableName = 'CONFIRMING_DOCUMENTS'
+    Left = 40
+    Top = 208
+  end
+  object DataSourceConfirmingDocuments: TDataSource
+    DataSet = TableConfirmingDocuments
+    Left = 8
+    Top = 208
+  end
+end

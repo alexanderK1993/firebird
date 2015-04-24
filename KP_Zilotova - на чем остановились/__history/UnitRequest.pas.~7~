@@ -1,0 +1,76 @@
+unit UnitRequest;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants,
+   Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls,
+  Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TFRequest = class(TForm)
+    RequestDataSource: TDataSource;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    RequestTable: TTable;
+    CarDataSource: TDataSource;
+    ManagerDataSource: TDataSource;
+    CarTable: TTable;
+    ManagerTable: TTable;
+    RequestTableREQUESTCD: TIntegerField;
+    RequestTableAVTOCD: TStringField;
+    RequestTableMANAGERCD: TIntegerField;
+    RequestTableDATE_REQUEST: TDateField;
+    RequestTable_: TStringField;
+    RequestTable_2: TStringField;
+    CarTableAVTOCD: TStringField;
+    CarTableCLIENTCD: TIntegerField;
+    CarTableMARKACD: TStringField;
+    CarTableMODELCD: TStringField;
+    CarTableYEAR_AVTO: TSmallintField;
+    CarTablePRICE_AVTO: TFloatField;
+    CarTableFieldAVTO: TStringField;
+    DBNavigator2: TDBNavigator;
+    DBGrid2: TDBGrid;
+    DataSource1: TDataSource;
+    Table1: TTable;
+    CarTableField: TStringField;
+    procedure FormShow(Sender: TObject);
+    procedure FormHide(Sender: TObject);
+    procedure CarOnCalcFields(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRequest: TFRequest;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFRequest.CarOnCalcFields(DataSet: TDataSet);
+begin
+CarTableFieldAVTO.Value := CarTableMARKACD.Value + ' '+ CarTableMODELCD.Value + ' '+CarTableFieldAVTO.Value;
+end;
+
+procedure TFRequest.FormHide(Sender: TObject);
+begin
+RequestTable.Close();
+CarTable.Close();
+ManagerTable.Close();
+Table1.Close();
+end;
+
+procedure TFRequest.FormShow(Sender: TObject);
+begin
+RequestTable.Open();
+CarTable.Open();
+ManagerTable.Open();
+Table1.Open();
+end;
+
+end.

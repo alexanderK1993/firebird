@@ -1,0 +1,302 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Left = 150
+  Top = 173
+  Height = 376
+  Width = 512
+  object CalculatorDS: TDataSource
+    DataSet = Calculator
+    Left = 24
+    Top = 104
+  end
+  object Calculator: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'CALCULATOR'
+    Left = 24
+    Top = 56
+  end
+  object KP_nashchekin: TDatabase
+    AliasName = 'nashchekin'
+    DatabaseName = 'nashchekinDatabase'
+    LoginPrompt = False
+    Params.Strings = (
+      'user=sysdba'
+      'password=masterkey')
+    SessionName = 'Default'
+    Left = 216
+    Top = 8
+  end
+  object CarDS: TDataSource
+    DataSet = Car
+    Left = 96
+    Top = 104
+  end
+  object Car: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'CAR'
+    Left = 96
+    Top = 56
+  end
+  object CarcassDS: TDataSource
+    DataSet = Carcass
+    Left = 168
+    Top = 104
+  end
+  object Carcass: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'CARCASS'
+    Left = 168
+    Top = 56
+  end
+  object ClientDS: TDataSource
+    DataSet = Client
+    Left = 240
+    Top = 104
+  end
+  object Client: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'CLIENT'
+    Left = 240
+    Top = 56
+  end
+  object CompanyDS: TDataSource
+    DataSet = Company
+    Left = 304
+    Top = 104
+  end
+  object Company: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'COMPANY'
+    Left = 304
+    Top = 56
+  end
+  object InspectionDS: TDataSource
+    DataSet = Inspection
+    Left = 24
+    Top = 200
+  end
+  object Inspection: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'INSPECTION'
+    Left = 24
+    Top = 152
+  end
+  object ManagerDS: TDataSource
+    DataSet = Manager
+    Left = 88
+    Top = 200
+  end
+  object Manager: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'MANAGER'
+    Left = 88
+    Top = 152
+  end
+  object MotorDS: TDataSource
+    DataSet = Motor
+    Left = 144
+    Top = 200
+  end
+  object Motor: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'MOTOR'
+    Left = 144
+    Top = 152
+  end
+  object Personal_ContractDS: TDataSource
+    DataSet = Personal_Contract
+    Left = 208
+    Top = 216
+  end
+  object Personal_Contract: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'PERSONAL_CONTRACT'
+    Left = 208
+    Top = 168
+  end
+  object Personal_InsuranceDS: TDataSource
+    DataSet = Personal_Insurance
+    Left = 296
+    Top = 200
+  end
+  object Personal_Insurance: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'PERSONAL_INSURANCE'
+    Left = 296
+    Top = 152
+  end
+  object ContractDS: TDataSource
+    DataSet = Contract
+    Left = 368
+    Top = 104
+  end
+  object Contract: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'CONTRACT'
+    Left = 368
+    Top = 56
+  end
+  object PolisDS: TDataSource
+    DataSet = Polis
+    Left = 376
+    Top = 216
+  end
+  object Polis: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'POLIS'
+    Left = 376
+    Top = 168
+  end
+  object DiagnostDS: TDataSource
+    DataSet = Diagnost
+    Left = 440
+    Top = 104
+  end
+  object Diagnost: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'DIAGNOST'
+    Left = 440
+    Top = 56
+  end
+  object RequestDS: TDataSource
+    DataSet = Request
+    Left = 432
+    Top = 208
+  end
+  object Request: TTable
+    DatabaseName = 'ZilotovaDatabase'
+    TableName = 'REQUEST'
+    Left = 432
+    Top = 160
+  end
+  object Report1: TQuery
+    DatabaseName = 'ZilotovaDatabase'
+    SQL.Strings = (
+      
+        'Select c.ContractCD as "'#1050#1086#1076'_'#1076#1086#1075#1086#1074#1086#1088#1072'", r. AVTOCD as "'#1053#1086#1084#1077#1088'_'#1072#1074#1090#1086'"' +
+        ','
+      
+        'c.Date_contract as "'#1044#1072#1090#1072'_'#1079#1072#1082#1083#1102#1095#1077#1085#1080#1103'", Date_Finish as "'#1044#1072#1090#1072'_'#1086#1082#1086#1085#1095 +
+        #1072#1085#1080#1103'"'
+      'from contract c, calculator calc, request r, Personal_contract p'
+      
+        'where c.calculatorcd=calc.calculatorcd and calc.requestcd=r.requ' +
+        'estcd'
+      'and c. SpecDogCD=p. SpecDogCD'
+      'and FIO_SpecDog = :p1;')
+    Left = 56
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'p1'
+        ParamType = ptUnknown
+      end>
+  end
+  object Report1DS: TDataSource
+    DataSet = Report1
+    Left = 56
+    Top = 320
+  end
+  object Report2: TQuery
+    DatabaseName = 'ZilotovaDatabase'
+    SQL.Strings = (
+      'Select r.requestcd as "'#1050#1086#1076'_'#1079#1072#1103#1074#1082#1080'", r.AVTOCD as "'#1053#1086#1084#1077#1088'_'#1072#1074#1090#1086'",'
+      'r.DATE_REQUEST as "'#1044#1072#1090#1072'_'#1087#1086#1089#1090#1091#1087#1083#1077#1085#1080#1103'_'#1079#1072#1103#1074#1082#1080'"'
+      'from  request r, manager m'
+      'where m.MANAGER_FIO = :p1;'
+      '')
+    Left = 128
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'p1'
+        ParamType = ptUnknown
+      end>
+  end
+  object Report2DS: TDataSource
+    DataSet = Report2
+    Left = 128
+    Top = 320
+  end
+  object Report3: TQuery
+    DatabaseName = 'ZilotovaDatabase'
+    SQL.Strings = (
+      'Select calc.requestcd as "'#1050#1086#1076'_'#1079#1072#1103#1074#1082#1080'", '
+      
+        'p.polisnm as "'#1057#1090#1088#1072#1093#1086#1074#1086#1081'_'#1087#1086#1083#1080#1089'", calc.price_insurance as "'#1057#1090#1086#1080#1084#1086#1089 +
+        #1090#1100'"'
+      'from calculator calc, company c, polis p'
+      'where c.companycd=calc.companycd and p.poliscd=calc.poliscd'
+      'and c.companynm = :p1;'
+      '')
+    Left = 200
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'p1'
+        ParamType = ptUnknown
+      end>
+  end
+  object Report3DS: TDataSource
+    DataSet = Report3
+    Left = 200
+    Top = 320
+  end
+  object Report4: TQuery
+    DatabaseName = 'ZilotovaDatabase'
+    SQL.Strings = (
+      'Select i.LookCD as "'#1050#1086#1076'_'#1086#1089#1084#1086#1090#1088#1072'", i.AVTOCD as "'#1053#1086#1084#1077#1088'_'#1072#1074#1090#1086'",'
+      ' i.Date_look as "'#1044#1072#1090#1072'_'#1086#1089#1084#1086#1090#1088#1072'"'
+      'from Inspection i, Diagnost d'
+      'where i.Diagnostcd=d.Diagnostcd'
+      'and d.FIO_Diagnost = :p1;'
+      '')
+    Left = 280
+    Top = 280
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'p1'
+        ParamType = ptUnknown
+      end>
+  end
+  object Report4DS: TDataSource
+    DataSet = Report4
+    Left = 280
+    Top = 320
+  end
+  object Report5: TQuery
+    DatabaseName = 'ZilotovaDatabase'
+    SQL.Strings = (
+      'Select sum(Profit) as "'#1057#1091#1084#1084#1072' '#1076#1086#1093#1086#1076#1072'"'
+      'From calculator '
+      'Where extract(year from  DATE_PAY) =:p1;'
+      '')
+    Left = 360
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'p1'
+        ParamType = ptUnknown
+      end>
+  end
+  object Report5DS: TDataSource
+    DataSet = Report5
+    Left = 360
+    Top = 320
+  end
+  object TableLicaFonda: TTable
+    DatabaseName = 'nashchekinDatabase'
+    Left = 32
+    Top = 8
+  end
+  object DSLicaFonda: TDataSource
+    DataSet = TableLicaFonda
+    Left = 88
+    Top = 8
+  end
+end

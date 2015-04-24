@@ -1,0 +1,24 @@
+unit UnitSpisokFirm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TFSpisokFirm = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FSpisokFirm: TFSpisokFirm;
+
+implementation
+
+{$R *.dfm}
+
+end.

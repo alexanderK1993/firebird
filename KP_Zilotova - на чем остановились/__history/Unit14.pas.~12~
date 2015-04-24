@@ -1,0 +1,86 @@
+unit Unit14;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TForm14 = class(TForm)
+    DBEdit1: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    CalcDataSource: TDataSource;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    CalcTable: TTable;
+    DBEdit4: TDBEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    DBEdit6: TDBEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    RequestTable: TTable;
+    RequestDataSource: TDataSource;
+    PolisTable: TTable;
+    PolisDataSource: TDataSource;
+    CompanyTable: TTable;
+    CompanyDataSource: TDataSource;
+    SpecInsTable: TTable;
+    SpecInsDataSource: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    DBLookupComboBox2: TDBLookupComboBox;
+    DBLookupComboBox3: TDBLookupComboBox;
+    DBLookupComboBox4: TDBLookupComboBox;
+    CalcTableCALCULATORCD: TIntegerField;
+    CalcTableREQUESTCD: TIntegerField;
+    CalcTablePOLISCD: TIntegerField;
+    CalcTableCOMPANYCD: TIntegerField;
+    CalcTablePRICE_INSURANCE: TFloatField;
+    CalcTableDATE_PAY: TDateField;
+    CalcTableSPECSTRCD: TIntegerField;
+    CalcTableINCOME: TFloatField;
+    CalcTablePROFIT: TFloatField;
+    procedure FormShow(Sender: TObject);
+    procedure FormHide(Sender: TObject);
+    procedure TableOnCalcFields(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form14: TForm14;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm14.FormHide(Sender: TObject);
+begin
+CalcTable.Close();
+RequestTable.Close();
+PolisTable.Close();
+CompanyTable.Close();
+SpecInsTable.Close();
+end;
+
+procedure TForm14.FormShow(Sender: TObject);
+begin
+CalcTable.Open();
+RequestTable.Open();
+PolisTable.Open();
+CompanyTable.Open();
+SpecInsTable.Open();
+end;
+
+procedure TForm14.TableOnCalcFields(DataSet: TDataSet);
+begin
+CalcTableINCOME.Value := CalcTablePRICE_INSURANCE.Value*0.15;
+end;
+
+end.

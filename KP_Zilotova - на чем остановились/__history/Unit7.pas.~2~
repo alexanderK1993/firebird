@@ -1,0 +1,32 @@
+unit Unit7;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Mask, DBCtrls, DB, DBTables, ExtCtrls, Grids, DBGrids;
+
+type
+  TForm7 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    CarcassDataSource: TDataSource;
+    CarcassTable: TTable;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form7: TForm7;
+
+implementation
+
+{$R *.dfm}
+
+end.

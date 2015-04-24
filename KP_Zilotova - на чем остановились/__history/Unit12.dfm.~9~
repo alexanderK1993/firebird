@@ -1,0 +1,145 @@
+object Form12: TForm12
+  Left = 0
+  Top = 0
+  Caption = #1047#1072#1103#1074#1082#1080
+  ClientHeight = 352
+  ClientWidth = 436
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnHide = FormHide
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 179
+    Width = 57
+    Height = 13
+    Caption = #1048#1044'_'#1047#1072#1103#1074#1082#1080
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 212
+    Width = 82
+    Height = 13
+    Caption = #1048#1044'_'#1040#1074#1090#1086#1084#1086#1073#1080#1083#1103
+  end
+  object Label3: TLabel
+    Left = 26
+    Top = 247
+    Width = 80
+    Height = 13
+    Caption = #1048#1044'_'#1052#1077#1085#1077#1076#1078#1077#1088#1072
+  end
+  object Label4: TLabel
+    Left = 24
+    Top = 284
+    Width = 104
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1087#1086#1076#1072#1095#1080' '#1079#1072#1103#1074#1082#1080
+  end
+  object DBEdit1: TDBEdit
+    Left = 136
+    Top = 176
+    Width = 121
+    Height = 21
+    DataField = 'REQUESTCD'
+    DataSource = RequestDataSource
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 53
+    Width = 404
+    Height = 120
+    DataSource = RequestDataSource
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 436
+    Height = 25
+    DataSource = RequestDataSource
+    Align = alTop
+    TabOrder = 2
+    ExplicitWidth = 352
+  end
+  object DBEdit4: TDBEdit
+    Left = 134
+    Top = 281
+    Width = 121
+    Height = 21
+    DataField = 'DATE_REQUEST'
+    DataSource = RequestDataSource
+    TabOrder = 3
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 136
+    Top = 212
+    Width = 121
+    Height = 21
+    DataField = 'AVTOCD'
+    DataSource = RequestDataSource
+    KeyField = 'AVTOCD'
+    ListField = 'MARKACD'
+    ListSource = CarDataSource
+    TabOrder = 4
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 136
+    Top = 247
+    Width = 121
+    Height = 21
+    DataField = 'MANAGERCD'
+    DataSource = RequestDataSource
+    KeyField = 'MANAGERCD'
+    ListField = 'MANAGER_FIO'
+    ListSource = ManagerDataSource
+    TabOrder = 5
+  end
+  object RequestDataSource: TDataSource
+    DataSet = RequestTable
+    Left = 272
+    Top = 176
+  end
+  object RequestTable: TTable
+    Active = True
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'REQUEST'
+    Left = 272
+    Top = 224
+  end
+  object CarDataSource: TDataSource
+    DataSet = CarTable
+    Left = 88
+    Top = 312
+  end
+  object ManagerDataSource: TDataSource
+    DataSet = ManagerTable
+    Left = 200
+    Top = 312
+  end
+  object CarTable: TTable
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'CAR'
+    Left = 48
+    Top = 312
+  end
+  object ManagerTable: TTable
+    DatabaseName = 'ZilotovaDB'
+    TableName = 'MANAGER'
+    Left = 160
+    Top = 312
+  end
+end

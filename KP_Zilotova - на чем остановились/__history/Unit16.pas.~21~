@@ -1,0 +1,87 @@
+unit Unit16;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids, StdCtrls, Mask;
+
+type
+  TForm16 = class(TForm)
+    SpecDocDataSource: TDataSource;
+    SpecDocTable: TTable;
+    SpecDocComboBox: TDBLookupComboBox;
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    Label2: TLabel;
+    YearEdit: TEdit;
+    Label3: TLabel;
+    Button1: TButton;
+    DBGrid2: TDBGrid;
+    ContractQuery: TQuery;
+    CalcQuery: TQuery;
+    ContractDataSource: TDataSource;
+    CalcDataSource: TDataSource;
+    Button2: TButton;
+    Button3: TButton;
+    Label4: TLabel;
+    DBGrid3: TDBGrid;
+    ManagerComboBox: TDBLookupComboBox;
+    ManagerDataSource: TDataSource;
+    ManagerTable: TTable;
+    ContractQueryM: TQuery;
+    ContractDataSetM: TDataSource;
+    procedure FormOnShow(Sender: TObject);
+    procedure FormOnHide(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form16: TForm16;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm16.Button1Click(Sender: TObject);
+begin
+CalcQuery.Active := false;
+CalcQuery.ParamByName('p1').Value:= YearEdit.Text;
+CalcQuery.Active := true;
+end;
+
+procedure TForm16.Button2Click(Sender: TObject);
+begin
+ContractQuery.Active := false;
+ContractQuery.ParamByName('p1').Value:= SpecDocComboBox.Text;
+ContractQuery.Active := True;
+end;
+
+procedure TForm16.Button3Click(Sender: TObject);
+begin
+ContractQueryM.Active := false;
+ContractQueryM.ParamByName('p1').Value:= ManagerComboBox.Text;
+ContractQueryM.Active := True;
+end;
+
+procedure TForm16.FormOnHide(Sender: TObject);
+begin
+SpecDocTable.Close();
+ManagerTable.Close();
+ContractQuery.Active := False;
+CalcQuery.Active := False;
+end;
+
+procedure TForm16.FormOnShow(Sender: TObject);
+begin
+SpecDocTable.Open();
+ManagerTable.Open();
+end;
+
+end.
