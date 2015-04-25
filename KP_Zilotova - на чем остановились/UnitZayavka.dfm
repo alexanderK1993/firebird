@@ -1,8 +1,8 @@
 object FZayavka: TFZayavka
-  Left = 307
-  Top = 306
-  Width = 620
-  Height = 250
+  Left = 366
+  Top = 364
+  Width = 632
+  Height = 288
   Caption = #1047#1072#1103#1074#1082#1072
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -59,7 +59,7 @@ object FZayavka: TFZayavka
       item
         Expanded = False
         FieldName = 'SOD_ZAYAVKI'
-        Title.Caption = 'SOD '#1079#1072#1103#1074#1082#1080
+        Title.Caption = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1079#1072#1103#1074#1082#1080
         Width = 135
         Visible = True
       end>

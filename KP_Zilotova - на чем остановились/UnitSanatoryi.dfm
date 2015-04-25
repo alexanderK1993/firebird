@@ -41,7 +41,7 @@ object FSanatoryi: TFSanatoryi
       item
         Expanded = False
         FieldName = 'USL_PROG'
-        Title.Caption = #1059#1089#1083#1091#1075#1080' '#1087#1088#1086#1075#1088#1072#1084#1084#1080#1089#1090#1072'?'
+        Title.Caption = #1091#1089#1083#1086#1074#1080#1103' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
         Width = 152
         Visible = True
       end

@@ -1,9 +1,9 @@
 object FJob: TFJob
-  Left = 290
-  Top = 217
+  Left = 118
+  Top = 137
   Width = 307
-  Height = 354
-  Caption = #1056#1072#1073#1086#1090#1072
+  Height = 366
+  Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -29,7 +29,7 @@ object FJob: TFJob
       item
         Expanded = False
         FieldName = 'ID_JOB'
-        Title.Caption = 'ID '#1056#1072#1073#1086#1090#1099
+        Title.Caption = 'ID '#1044#1086#1083#1078#1085#1086#1089#1090#1080
         Visible = True
       end
       item

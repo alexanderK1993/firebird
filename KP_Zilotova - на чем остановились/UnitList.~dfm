@@ -1,8 +1,8 @@
 object OtchetForm: TOtchetForm
-  Left = 293
-  Top = 277
+  Left = 236
+  Top = 311
   Width = 934
-  Height = 585
+  Height = 521
   Caption = #1054#1090#1095#1077#1090
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -38,10 +38,10 @@ object OtchetForm: TOtchetForm
   end
   object Label4: TLabel
     Left = 528
-    Top = 8
-    Width = 141
+    Top = 32
+    Width = 108
     Height = 13
-    Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1084#1077#1085#1077#1076#1078#1077#1088#1072' '#1089#1074#1103#1079#1080
+    Caption = #1055#1086#1083#1091#1095#1080#1074#1096#1080#1077' '#1087#1091#1090#1077#1074#1082#1080
   end
   object Label5: TLabel
     Left = 169
@@ -115,7 +115,7 @@ object OtchetForm: TOtchetForm
     Left = 24
     Top = 299
     Width = 121
-    Height = 120
+    Height = 142
     DataSource = SotrDataSource
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
@@ -134,7 +134,7 @@ object OtchetForm: TOtchetForm
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 679
+    Left = 655
     Top = 31
     Width = 101
     Height = 21
@@ -144,10 +144,10 @@ object OtchetForm: TOtchetForm
   end
   object DBGrid3: TDBGrid
     Left = 528
-    Top = 81
-    Width = 369
-    Height = 120
-    DataSource = ContractDataSetM
+    Top = 72
+    Width = 377
+    Height = 153
+    DataSource = ZastrDataSet
     ReadOnly = True
     TabOrder = 7
     TitleFont.Charset = DEFAULT_CHARSET
@@ -156,33 +156,23 @@ object OtchetForm: TOtchetForm
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
   end
-  object ManagerComboBox: TDBLookupComboBox
-    Left = 528
-    Top = 31
-    Width = 145
-    Height = 21
-    KeyField = 'MANAGERCD'
-    ListField = 'MANAGER_FIO'
-    ListSource = ManagerDataSource
-    TabOrder = 8
-  end
   object Button4: TButton
     Left = 320
     Top = 241
     Width = 97
     Height = 21
     Caption = #1042#1099#1074#1077#1089#1090#1080' '#1086#1090#1095#1077#1090
-    TabOrder = 9
+    TabOrder = 8
     OnClick = Button4Click
   end
   object DBGrid4: TDBGrid
     Left = 167
     Top = 299
     Width = 298
-    Height = 120
+    Height = 142
     DataSource = LicoDataSource
     ReadOnly = True
-    TabOrder = 10
+    TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -197,7 +187,7 @@ object OtchetForm: TOtchetForm
     KeyField = 'ID_LICA'
     ListField = 'FIO_LICA'
     ListSource = LicaDataSource
-    TabOrder = 11
+    TabOrder = 10
   end
   object Button5: TButton
     Left = 626
@@ -205,17 +195,17 @@ object OtchetForm: TOtchetForm
     Width = 97
     Height = 23
     Caption = #1042#1099#1074#1077#1089#1090#1080' '#1086#1090#1095#1077#1090
-    TabOrder = 12
+    TabOrder = 11
     OnClick = Button5Click
   end
   object DBGrid5: TDBGrid
     Left = 471
     Top = 299
-    Width = 263
-    Height = 120
+    Width = 434
+    Height = 142
     DataSource = strahovDataSource
     ReadOnly = True
-    TabOrder = 13
+    TabOrder = 12
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -230,7 +220,7 @@ object OtchetForm: TOtchetForm
     KeyField = 'ID_STRAH'
     ListField = 'FIO_STRAH'
     ListSource = StrahoDataSource
-    TabOrder = 14
+    TabOrder = 13
   end
   object DBGrid6: TDBGrid
     Left = 152
@@ -239,7 +229,7 @@ object OtchetForm: TOtchetForm
     Height = 128
     DataSource = LicaFondaDataSource
     ReadOnly = True
-    TabOrder = 15
+    TabOrder = 14
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -253,7 +243,7 @@ object OtchetForm: TOtchetForm
     Height = 128
     DataSource = ZastrahLicaDataSource
     ReadOnly = True
-    TabOrder = 16
+    TabOrder = 15
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -305,7 +295,7 @@ object OtchetForm: TOtchetForm
       'from LICA_FONDA'
       'where extract(year from DATA_BIRTH_LICA)=:p1')
     Left = 64
-    Top = 424
+    Top = 448
     ParamData = <
       item
         DataType = ftUnknown
@@ -331,50 +321,34 @@ object OtchetForm: TOtchetForm
   object SotrDataSource: TDataSource
     DataSet = SotrQuery
     Left = 40
-    Top = 424
+    Top = 448
   end
-  object ManagerDataSource: TDataSource
-    DataSet = ManagerTable
-    Left = 792
-    Top = 48
-  end
-  object ManagerTable: TTable
-    DatabaseName = 'ZilotovaDB'
-    TableName = 'MANAGER'
-    Left = 792
-    Top = 8
-  end
-  object ContractQueryM: TQuery
+  object ZastrQuery: TQuery
     AutoRefresh = True
-    DatabaseName = 'ZilotovaDB'
+    DatabaseName = 'nashchekin'
     SQL.Strings = (
-      'Select r.requestcd as "'#1050#1086#1076'_'#1079#1072#1103#1074#1082#1080'", r.AVTOCD as "'#1053#1086#1084#1077#1088'_'#1072#1074#1090#1086'",'
-      'r.DATE_REQUEST as "'#1044#1072#1090#1072'_'#1087#1086#1089#1090#1091#1087#1083#1077#1085#1080#1103'_'#1079#1072#1103#1074#1082#1080'"'
-      'from  request r, manager m'
-      'where m.MANAGER_FIO = :p1;')
+      'Select FIO_ZASTRAH_LICA as "'#1060#1048#1054' '#1079#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1086#1075#1086' '#1083#1080#1094#1072'"'
+      'from ZASTRAHOVANIE_LICA,VIDANIE_PUTEVKI'
+      
+        'where ZASTRAHOVANIE_LICA.ID_ZASTRAH_LICA=VIDANIE_PUTEVKI.ID_ZAST' +
+        'RAH_LICA')
     Left = 768
-    Top = 88
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'p1'
-        ParamType = ptUnknown
-      end>
+    Top = 24
   end
-  object ContractDataSetM: TDataSource
-    DataSet = ContractQueryM
-    Left = 768
-    Top = 120
+  object ZastrDataSet: TDataSource
+    DataSet = ZastrQuery
+    Left = 800
+    Top = 24
   end
   object LicaDataSource: TDataSource
     DataSet = LicoFondaTable
-    Left = 345
+    Left = 361
     Top = 214
   end
   object LicoFondaTable: TTable
     DatabaseName = 'nashchekin'
     TableName = 'LICA_FONDA'
-    Left = 313
+    Left = 329
     Top = 214
   end
   object LicoQuery: TQuery
@@ -388,8 +362,8 @@ object OtchetForm: TOtchetForm
       ',NAME_FIRMA as "'#1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1080#1088#1084#1099'"'
       'from LICA_FONDA,SPISOK_FIRM'
       'where LICA_FONDA.ID_FIRMA=SPISOK_FIRM.ID_FIRMA and FIO_LICA=:p1')
-    Left = 289
-    Top = 430
+    Left = 281
+    Top = 454
     ParamData = <
       item
         DataType = ftUnknown
@@ -399,19 +373,19 @@ object OtchetForm: TOtchetForm
   end
   object LicoDataSource: TDataSource
     DataSet = LicoQuery
-    Left = 321
-    Top = 430
+    Left = 313
+    Top = 454
   end
   object StrahoDataSource: TDataSource
     DataSet = StrahTable
-    Left = 745
-    Top = 254
+    Left = 785
+    Top = 262
   end
   object StrahTable: TTable
     DatabaseName = 'nashchekin'
     TableName = 'STRAHOVATELI'
-    Left = 745
-    Top = 222
+    Left = 753
+    Top = 262
   end
   object strahoQuery: TQuery
     AutoRefresh = True
@@ -426,8 +400,8 @@ object OtchetForm: TOtchetForm
       
         'where STRAHOVATELI.ID_FIRMA=SPISOK_FIRM.ID_FIRMA and FIO_STRAH=:' +
         'p1')
-    Left = 745
-    Top = 286
+    Left = 817
+    Top = 262
     ParamData = <
       item
         DataType = ftUnknown
@@ -437,8 +411,8 @@ object OtchetForm: TOtchetForm
   end
   object strahovDataSource: TDataSource
     DataSet = strahoQuery
-    Left = 745
-    Top = 326
+    Left = 849
+    Top = 262
   end
   object StrahQuery: TQuery
     AutoRefresh = True

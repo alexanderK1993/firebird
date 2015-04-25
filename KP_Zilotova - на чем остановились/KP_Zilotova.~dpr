@@ -3,7 +3,6 @@ program KP_Zilotova;
 uses
   Forms,
   UnitMain in 'UnitMain.pas' {MainForm},
-  Datamodule in 'Datamodule.pas' {DataModule1: TDataModule},
   UnitLicaFonda in 'UnitLicaFonda.pas' {FLicaFonda},
   UnitConfirmingDocuments in 'UnitConfirmingDocuments.pas' {FConfirmDocuments},
   UnitJob in 'UnitJob.pas' {FJob},

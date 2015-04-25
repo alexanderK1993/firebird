@@ -1,8 +1,8 @@
 object FConfirmDocuments: TFConfirmDocuments
-  Left = 228
-  Top = 238
+  Left = 421
+  Top = 409
   Width = 637
-  Height = 242
+  Height = 245
   Caption = #1055#1086#1076#1090#1074#1077#1088#1078#1076#1077#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -35,7 +35,7 @@ object FConfirmDocuments: TFConfirmDocuments
       item
         Expanded = False
         FieldName = 'SOD_DOCUMENTA'
-        Title.Caption = 'SOD '#1076#1086#1082#1091#1084#1077#1085#1090#1072
+        Title.Caption = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
         Visible = True
       end
       item

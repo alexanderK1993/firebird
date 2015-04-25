@@ -1,8 +1,8 @@
 object FSpisokFirm: TFSpisokFirm
-  Left = 0
-  Top = 0
-  Width = 522
-  Height = 241
+  Left = 305
+  Top = 259
+  Width = 549
+  Height = 284
   Caption = #1057#1087#1080#1089#1086#1082' '#1092#1080#1088#1084
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

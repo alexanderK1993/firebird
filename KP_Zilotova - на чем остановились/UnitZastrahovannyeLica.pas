@@ -12,6 +12,19 @@ type
     DBNavigator1: TDBNavigator;
     TableZastrahLica: TTable;
     DataSourceZastrahLica: TDataSource;
+    DBNavigator2: TDBNavigator;
+    DBGrid2: TDBGrid;
+    TableJob: TTable;
+    DataSourceJob: TDataSource;
+    TableZastrahLicaID_ZASTRAH_LICA: TIntegerField;
+    TableZastrahLicaID_JOB: TIntegerField;
+    TableZastrahLicaFIO_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaDATA_PRIN_WORK: TDateField;
+    TableZastrahLicaADRES_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaTEL_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaDATA_BIRTH_ZASTRAH_LICA: TDateField;
+    TableZastrahLicaID_FIRMA: TIntegerField;
+    TableZastrahLicaField: TStringField;
   private
     { Private declarations }
   public

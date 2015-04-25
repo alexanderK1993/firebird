@@ -26,11 +26,8 @@ type
     Button3: TButton;
     Label4: TLabel;
     DBGrid3: TDBGrid;
-    ManagerComboBox: TDBLookupComboBox;
-    ManagerDataSource: TDataSource;
-    ManagerTable: TTable;
-    ContractQueryM: TQuery;
-    ContractDataSetM: TDataSource;
+    ZastrQuery: TQuery;
+    ZastrDataSet: TDataSource;
     Button4: TButton;
     Label5: TLabel;
     DBGrid4: TDBGrid;
@@ -97,9 +94,8 @@ end;
 
 procedure TOtchetForm.Button3Click(Sender: TObject);
 begin
-ContractQueryM.Active := false;
-ContractQueryM.ParamByName('p1').Value:= ManagerComboBox.Text;
-ContractQueryM.Active := True;
+ZastrQuery.Active := false;
+ZastrQuery.Active := True;
 end;
 
 procedure TOtchetForm.Button4Click(Sender: TObject);
@@ -119,7 +115,6 @@ end;
 procedure TOtchetForm.FormOnHide(Sender: TObject);
 begin
 NameFirmTable.Close();
-ManagerTable.Close();
 LicoFondaTable.Close();
 strahTable.Close();
 ZastrahLicaQuery.Active := False;
@@ -129,7 +124,6 @@ end;
 procedure TOtchetForm.FormOnShow(Sender: TObject);
 begin
 NameFirmTable.Open();
-ManagerTable.Open();
 LicoFondaTable.Open();
 strahTable.Open();
 end;

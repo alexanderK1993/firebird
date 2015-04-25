@@ -47,7 +47,7 @@ object FJournalPutevok: TFJournalPutevok
       item
         Expanded = False
         FieldName = 'SOD_PUTEVKI'
-        Title.Caption = 'SOD '#1087#1091#1090#1077#1074#1082#1080
+        Title.Caption = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077
         Visible = True
       end
       item
