@@ -1,6 +1,6 @@
 object FJournalPutevok: TFJournalPutevok
-  Left = 298
-  Top = 237
+  Left = 296
+  Top = 265
   Width = 692
   Height = 250
   Caption = #1046#1091#1088#1085#1072#1083' '#1087#1091#1090#1077#1074#1086#1082

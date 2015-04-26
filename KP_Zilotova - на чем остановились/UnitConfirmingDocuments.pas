@@ -12,6 +12,47 @@ type
     DBNavigator1: TDBNavigator;
     TableConfirmingDocuments: TTable;
     DataSourceConfirmingDocuments: TDataSource;
+    TablePrikazu: TTable;
+    TablePrikazuID_PRIKAZA: TIntegerField;
+    TablePrikazuDATA_PRIKAZA: TDateField;
+    TablePrikazuSOD_PRIKAZA: TStringField;
+    TablePrikazuID_STRAH: TIntegerField;
+    TablePrikazuID_ZASTRAH_LICA: TIntegerField;
+    TablePrikazuID_TYPE_PRIKAZA: TIntegerField;
+    DataSourcePrikazu: TDataSource;
+    DataSourceZastrahLica: TDataSource;
+    TableZastrahLica: TTable;
+    TableZastrahLicaID_ZASTRAH_LICA: TIntegerField;
+    TableZastrahLicaID_JOB: TIntegerField;
+    TableZastrahLicaFIO_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaDATA_PRIN_WORK: TDateField;
+    TableZastrahLicaADRES_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaTEL_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaDATA_BIRTH_ZASTRAH_LICA: TDateField;
+    TableZastrahLicaID_FIRMA: TIntegerField;
+    TableTypeDocuments: TTable;
+    DataSourceTypeDocuments: TDataSource;
+    DataSourceLicaFonda: TDataSource;
+    TableLicaFonda: TTable;
+    TableLicaFondaID_FIRMA: TIntegerField;
+    TableLicaFondaID_LICA: TIntegerField;
+    TableLicaFondaFIO_LICA: TStringField;
+    TableLicaFondaDATA_PRIN_WORK: TDateField;
+    TableLicaFondaADRES_LICA: TStringField;
+    TableLicaFondaTEL_LICA: TStringField;
+    TableLicaFondaDATA_BIRTH_LICA: TDateField;
+    TableLicaFondaID_ZAYAVKI: TIntegerField;
+    TableConfirmingDocumentsID_DOCUMENTA: TIntegerField;
+    TableConfirmingDocumentsSOD_DOCUMENTA: TStringField;
+    TableConfirmingDocumentsDATA_POD_DOCUMENTA: TDateField;
+    TableConfirmingDocumentsID_ZASTRAH_LICA: TIntegerField;
+    TableConfirmingDocumentsID_PRIKAZA: TIntegerField;
+    TableConfirmingDocumentsID_TYPE_DOCUMENTA: TIntegerField;
+    TableConfirmingDocumentsID_LICA: TIntegerField;
+    TableConfirmingDocumentsField: TStringField;
+    TableConfirmingDocumentsID: TIntegerField;
+    TableConfirmingDocumentsField2: TStringField;
+    TableConfirmingDocumentsField3: TStringField;
   private
     { Private declarations }
   public

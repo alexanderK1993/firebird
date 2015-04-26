@@ -1,9 +1,10 @@
 object FSpisokCountry: TFSpisokCountry
   Left = 306
   Top = 136
-  Width = 218
-  Height = 338
+  BorderStyle = bsToolWindow
   Caption = #1057#1087#1080#1089#1086#1082' '#1089#1090#1088#1072#1085
+  ClientHeight = 297
+  ClientWidth = 201
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

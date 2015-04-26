@@ -30,6 +30,9 @@ type
     N13: TMenuItem;
     N14: TMenuItem;
     N15: TMenuItem;
+    N16: TMenuItem;
+    N17: TMenuItem;
+    N18: TMenuItem;
     procedure zayavkaClick(Sender: TObject);
     procedure zastrahovannyeLicaClick(Sender: TObject);
     procedure vidaniePutevkiClick(Sender: TObject);
@@ -54,6 +57,7 @@ type
     procedure miContractClick(Sender: TObject);
     procedure miReportClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure N18Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -190,6 +194,11 @@ end;
 procedure TMainForm.SpisokCountryClick(Sender: TObject);
 begin
   FSpisokCountry.Show();
+end;
+
+procedure TMainForm.N18Click(Sender: TObject);
+begin
+OtchetForm.Show();
 end;
 
 end.

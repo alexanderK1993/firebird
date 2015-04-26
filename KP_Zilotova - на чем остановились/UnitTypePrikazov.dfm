@@ -1,9 +1,10 @@
 object FTypePrikazov: TFTypePrikazov
   Left = 291
   Top = 172
-  Width = 233
-  Height = 306
+  BorderStyle = bsToolWindow
   Caption = #1058#1080#1087#1099' '#1087#1088#1080#1082#1072#1079#1086#1074
+  ClientHeight = 292
+  ClientWidth = 247
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

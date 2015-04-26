@@ -1,9 +1,10 @@
 object FTypeDocuments: TFTypeDocuments
-  Left = 0
-  Top = 0
-  Width = 244
-  Height = 307
+  Left = 199
+  Top = 440
+  BorderStyle = bsToolWindow
   Caption = #1058#1080#1087#1099' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
+  ClientHeight = 269
+  ClientWidth = 280
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -51,7 +52,7 @@ object FTypeDocuments: TFTypeDocuments
     Active = True
     DatabaseName = 'nashchekin'
     TableName = 'TYPE_DOCUMENTS'
-    Left = 224
+    Left = 232
     Top = 80
   end
   object DataSourceTypeDocuments: TDataSource

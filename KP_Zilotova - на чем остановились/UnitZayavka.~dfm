@@ -1,8 +1,8 @@
 object FZayavka: TFZayavka
-  Left = 307
-  Top = 306
-  Width = 620
-  Height = 250
+  Left = 366
+  Top = 364
+  Width = 632
+  Height = 288
   Caption = #1047#1072#1103#1074#1082#1072
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

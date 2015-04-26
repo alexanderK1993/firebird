@@ -1,6 +1,6 @@
 object FZastrahovanyeLica: TFZastrahovanyeLica
-  Left = 259
-  Top = 68
+  Left = 47
+  Top = 142
   Width = 1222
   Height = 673
   Caption = #1047#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1099#1077' '#1083#1080#1094#1072
