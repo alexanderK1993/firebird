@@ -1,10 +1,10 @@
 object FSanatoryi: TFSanatoryi
-  Left = 388
-  Top = 392
+  Left = 146
+  Top = 385
   BorderStyle = bsToolWindow
   Caption = #1057#1072#1085#1072#1090#1086#1088#1080#1081
   ClientHeight = 363
-  ClientWidth = 881
+  ClientWidth = 729
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

@@ -4,7 +4,7 @@ object FSanatoryi: TFSanatoryi
   BorderStyle = bsToolWindow
   Caption = #1057#1072#1085#1072#1090#1086#1088#1080#1081
   ClientHeight = 363
-  ClientWidth = 729
+  ClientWidth = 812
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -147,7 +147,7 @@ object FSanatoryi: TFSanatoryi
       LookupDataSet = TableSpisokCountry
       LookupKeyFields = 'ID_TYPE_COUNTRY'
       LookupResultField = 'NAME_COUNTRY'
-      KeyFields = 'ID_SANATORIA'
+      KeyFields = 'ID_TYPE_COUNTRY'
       Lookup = True
     end
   end
