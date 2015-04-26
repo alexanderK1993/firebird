@@ -28,8 +28,6 @@ type
     DataSourceSpisokFirm: TDataSource;
     TableSpisokFirm: TTable;
     TableZastrahLicaField2: TStringField;
-    DataSource1: TDataSource;
-    Table1: TTable;
     DBGrid3: TDBGrid;
     DBNavigator3: TDBNavigator;
   private

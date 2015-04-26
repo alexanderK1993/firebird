@@ -1,6 +1,6 @@
 object OtchetForm: TOtchetForm
-  Left = 257
-  Top = 559
+  Left = 190
+  Top = 220
   Width = 934
   Height = 563
   Caption = #1054#1090#1095#1077#1090
