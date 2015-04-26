@@ -39,7 +39,7 @@ object MainForm: TMainForm
         OnClick = confirmDocClick
       end
       object N4: TMenuItem
-        Caption = #1056#1072#1073#1086#1090#1072
+        Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
         OnClick = JobClick
       end
       object N7: TMenuItem

@@ -1,7 +1,7 @@
 object FConfirmDocuments: TFConfirmDocuments
   Left = 251
   Top = 431
-  Width = 638
+  Width = 686
   Height = 240
   Caption = #1055#1086#1076#1090#1074#1077#1088#1078#1076#1077#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
   Color = clBtnFace
@@ -98,6 +98,7 @@ object FConfirmDocuments: TFConfirmDocuments
     TabOrder = 1
   end
   object TableConfirmingDocuments: TTable
+    Active = True
     DatabaseName = 'nashchekin'
     TableName = 'CONFIRMING_DOCUMENTS'
     Left = 624
@@ -163,7 +164,6 @@ object FConfirmDocuments: TFConfirmDocuments
       LookupKeyFields = 'ID_LICA'
       LookupResultField = 'FIO_LICA'
       KeyFields = 'ID_LICA'
-      Size = 0
       Lookup = True
     end
   end
@@ -173,6 +173,7 @@ object FConfirmDocuments: TFConfirmDocuments
     Top = 8
   end
   object TablePrikazu: TTable
+    Active = True
     DatabaseName = 'nashchekin'
     MasterSource = DataSourceConfirmingDocuments
     TableName = 'PRIKAZI'
@@ -200,30 +201,6 @@ object FConfirmDocuments: TFConfirmDocuments
     object TablePrikazuID_TYPE_PRIKAZA: TIntegerField
       FieldName = 'ID_TYPE_PRIKAZA'
       Required = True
-    end
-    object TablePrikazuStringField: TStringField
-      FieldKind = fkLookup
-      FieldName = #1090#1080#1087' '#1087#1088#1080#1082#1072#1079#1072
-      LookupKeyFields = 'ID_TYPE_PRIKAZA'
-      LookupResultField = 'NAME_PRIKAZA'
-      KeyFields = 'ID_TYPE_PRIKAZA'
-      Lookup = True
-    end
-    object TablePrikazuField: TStringField
-      FieldKind = fkLookup
-      FieldName = #1060#1048#1054' '#1079#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1086#1075#1086' '#1083#1080#1094#1072
-      LookupKeyFields = 'ID_ZASTRAH_LICA'
-      LookupResultField = 'FIO_ZASTRAH_LICA'
-      KeyFields = 'ID_ZASTRAH_LICA'
-      Lookup = True
-    end
-    object TablePrikazuField2: TStringField
-      FieldKind = fkLookup
-      FieldName = #1060#1048#1054' '#1089#1090#1088#1072#1093#1086#1074#1072#1090#1077#1083#1103
-      LookupKeyFields = 'ID_STRAH'
-      LookupResultField = 'FIO_STRAH'
-      KeyFields = 'ID_STRAH'
-      Lookup = True
     end
   end
   object DataSourcePrikazu: TDataSource
@@ -293,6 +270,7 @@ object FConfirmDocuments: TFConfirmDocuments
     Top = 128
   end
   object TableLicaFonda: TTable
+    Active = True
     AutoRefresh = True
     DatabaseName = 'nashchekin'
     MasterSource = DataSourceConfirmingDocuments

@@ -1,8 +1,8 @@
 object OtchetForm: TOtchetForm
-  Left = 231
-  Top = 396
+  Left = 286
+  Top = 213
   Width = 934
-  Height = 521
+  Height = 563
   Caption = #1054#1090#1095#1077#1090
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -53,9 +53,9 @@ object OtchetForm: TOtchetForm
   object Label6: TLabel
     Left = 475
     Top = 222
-    Width = 124
+    Width = 113
     Height = 13
-    Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1089#1090#1088#1072#1093#1086#1074#1072#1090#1077#1083#1103
+    Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1076#1086#1083#1078#1085#1086#1089#1090#1100':'
   end
   object Label7: TLabel
     Left = 168
@@ -70,6 +70,13 @@ object OtchetForm: TOtchetForm
     Width = 116
     Height = 13
     Caption = #1047#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1099#1077' '#1083#1080#1094#1072':'
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 304
+    Width = 153
+    Height = 13
+    Caption = #1055#1088#1080#1085#1103#1090#1099#1077' '#1089#1086#1090#1088#1091#1076#1085#1080#1082#1080' '#1079#1072' '#1075#1086#1076':'
   end
   object NameFirmComboBox: TDBLookupComboBox
     Left = 16
@@ -113,7 +120,7 @@ object OtchetForm: TOtchetForm
   end
   object DBGrid2: TDBGrid
     Left = 24
-    Top = 299
+    Top = 331
     Width = 121
     Height = 142
     DataSource = SotrDataSource
@@ -167,9 +174,9 @@ object OtchetForm: TOtchetForm
   end
   object DBGrid4: TDBGrid
     Left = 167
-    Top = 299
+    Top = 280
     Width = 298
-    Height = 142
+    Height = 193
     DataSource = LicoDataSource
     ReadOnly = True
     TabOrder = 9
@@ -200,9 +207,9 @@ object OtchetForm: TOtchetForm
   end
   object DBGrid5: TDBGrid
     Left = 471
-    Top = 299
+    Top = 280
     Width = 434
-    Height = 142
+    Height = 193
     DataSource = strahovDataSource
     ReadOnly = True
     TabOrder = 12
@@ -212,14 +219,14 @@ object OtchetForm: TOtchetForm
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
   end
-  object StrahComboBox: TDBLookupComboBox
+  object JobComboBox: TDBLookupComboBox
     Left = 475
     Top = 241
     Width = 145
     Height = 21
     KeyField = 'ID_STRAH'
     ListField = 'FIO_STRAH'
-    ListSource = StrahoDataSource
+    ListSource = JobDataSource
     TabOrder = 13
   end
   object DBGrid6: TDBGrid
@@ -285,17 +292,17 @@ object OtchetForm: TOtchetForm
     SQL.Strings = (
       'Select FIO_ZASTRAH_LICA as "'#1060#1048#1054' '#1089#1086#1090#1088#1091#1076#1085#1080#1082#1072'"'
       'from ZASTRAHOVANIE_LICA'
-      'where extract(year from  DATA_BIRTH_ZASTRAH_LICA)=:p1'
+      'where extract(year from  DATA_PRIN_WORK)=:p1'
       'union'
       'Select FIO_strah'
       'from Strahovateli'
-      'where extract(year from Data_birth_strah)=:p1'
+      'where extract(year from DATA_PRIN_WORK)=:p1'
       'union'
       'Select FIO_LICA'
       'from LICA_FONDA'
-      'where extract(year from DATA_BIRTH_LICA)=:p1')
-    Left = 64
-    Top = 448
+      'where extract(year from DATA_PRIN_WORK)=:p1')
+    Left = 72
+    Top = 480
     ParamData = <
       item
         DataType = ftUnknown
@@ -320,14 +327,15 @@ object OtchetForm: TOtchetForm
   end
   object SotrDataSource: TDataSource
     DataSet = SotrQuery
-    Left = 40
-    Top = 448
+    Left = 48
+    Top = 480
   end
   object ZastrQuery: TQuery
     AutoRefresh = True
     DatabaseName = 'nashchekin'
     SQL.Strings = (
       'Select FIO_ZASTRAH_LICA as "'#1060#1048#1054' '#1079#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1086#1075#1086' '#1083#1080#1094#1072'"'
+      ',NAME_VID_PUTEVKI as "'#1053#1072#1079#1074#1072#1085#1080#1077' '#1087#1091#1090#1077#1074#1082#1080'"'
       'from ZASTRAHOVANIE_LICA,VIDANIE_PUTEVKI'
       
         'where ZASTRAHOVANIE_LICA.ID_ZASTRAH_LICA=VIDANIE_PUTEVKI.ID_ZAST' +
@@ -355,15 +363,17 @@ object OtchetForm: TOtchetForm
     AutoRefresh = True
     DatabaseName = 'nashchekin'
     SQL.Strings = (
-      'Select DATA_PRIN_WORK as "'#1044#1072#1090#1072' '#1087#1088#1080#1085#1103#1090#1080#1103' '#1085#1072' '#1088#1072#1073#1086#1090#1091'"'
-      ',ADRES_LICA as "'#1040#1076#1088#1077#1089'"'
-      ',TEL_LICA as "'#1058#1077#1083#1077#1092#1086#1085'"'
-      ',DATA_BIRTH_LICA as "'#1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103'"'
-      ',NAME_FIRMA as "'#1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1080#1088#1084#1099'"'
-      'from LICA_FONDA,SPISOK_FIRM'
-      'where LICA_FONDA.ID_FIRMA=SPISOK_FIRM.ID_FIRMA and FIO_LICA=:p1')
+      
+        'Select NAME_FIRMA as "'#1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1080#1088#1084#1099'",ZAYAVKA.ID_ZAYAVKI as "ID ' +
+        #1079#1072#1103#1074#1082#1080'"'
+      ',DATA_ZAYAVKI as "'#1044#1072#1090#1072' '#1079#1072#1103#1074#1082#1080'"'
+      ',SOD_ZAYAVKI as "'#1057#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1079#1072#1103#1074#1082#1080'"'
+      'from SPISOK_FIRM,ZAYAVKA,LICA_FONDA'
+      'where LICA_FONDA.ID_ZAYAVKI=ZAYAVKA.ID_ZAYAVKI'
+      ' and FIO_LICA=:p1'
+      'and  LICA_FONDA.ID_FIRMA=SPISOK_FIRM.ID_FIRMA')
     Left = 281
-    Top = 454
+    Top = 478
     ParamData = <
       item
         DataType = ftUnknown
@@ -374,34 +384,30 @@ object OtchetForm: TOtchetForm
   object LicoDataSource: TDataSource
     DataSet = LicoQuery
     Left = 313
-    Top = 454
+    Top = 478
   end
-  object StrahoDataSource: TDataSource
-    DataSet = StrahTable
-    Left = 785
-    Top = 262
+  object JobDataSource: TDataSource
+    DataSet = JobTable
+    Left = 793
+    Top = 238
   end
-  object StrahTable: TTable
+  object JobTable: TTable
     DatabaseName = 'nashchekin'
     TableName = 'STRAHOVATELI'
-    Left = 753
-    Top = 262
+    Left = 761
+    Top = 238
   end
-  object strahoQuery: TQuery
+  object jobQuery: TQuery
     AutoRefresh = True
     DatabaseName = 'nashchekin'
     SQL.Strings = (
-      'Select DATA_PRIN_WORK as "'#1044#1072#1090#1072' '#1087#1088#1080#1085#1103#1090#1080#1103' '#1085#1072' '#1088#1072#1073#1086#1090#1091'"'
-      ',ADRES_STRAH as "'#1040#1076#1088#1077#1089'"'
-      ',TEL_STRAH as "'#1058#1077#1083#1077#1092#1086#1085'"'
-      ',DATA_BIRTH_STRAH as "'#1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103'"'
-      ',NAME_FIRMA as "'#1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1080#1088#1084#1099'"'
-      'from STRAHOVATELI,SPISOK_FIRM'
-      
-        'where STRAHOVATELI.ID_FIRMA=SPISOK_FIRM.ID_FIRMA and FIO_STRAH=:' +
-        'p1')
-    Left = 817
-    Top = 262
+      'Select FIO_ZASTRAH_LICA as "'#1060#1048#1054' '#1079#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1086#1075#1086' '#1083#1080#1094#1072'",'
+      'DATA_PRIN_WORK as "'#1044#1072#1090#1072' '#1087#1088#1080#1085#1103#1090#1080#1103' '#1085#1072' '#1088#1072#1073#1086#1090#1091'",'
+      'ZARPLATA as "'#1047#1072#1088#1087#1083#1072#1090#1072'"'
+      'from JOB,ZASTRAHOVANIE_LICA'
+      'where ZASTRAHOVANIE_LICA.ID_JOB=JOB.ID_JOB and NAME_JOB=:p1')
+    Left = 825
+    Top = 238
     ParamData = <
       item
         DataType = ftUnknown
@@ -410,9 +416,9 @@ object OtchetForm: TOtchetForm
       end>
   end
   object strahovDataSource: TDataSource
-    DataSet = strahoQuery
-    Left = 849
-    Top = 262
+    DataSet = jobQuery
+    Left = 857
+    Top = 238
   end
   object StrahQuery: TQuery
     AutoRefresh = True

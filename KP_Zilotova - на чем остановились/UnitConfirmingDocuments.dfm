@@ -1,9 +1,10 @@
 object FConfirmDocuments: TFConfirmDocuments
-  Left = 251
-  Top = 431
-  Width = 686
-  Height = 240
+  Left = 307
+  Top = 647
+  BorderStyle = bsToolWindow
   Caption = #1055#1086#1076#1090#1074#1077#1088#1078#1076#1077#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
+  ClientHeight = 201
+  ClientWidth = 623
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

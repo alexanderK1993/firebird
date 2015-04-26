@@ -19,9 +19,6 @@ type
     TablePrikazuID_STRAH: TIntegerField;
     TablePrikazuID_ZASTRAH_LICA: TIntegerField;
     TablePrikazuID_TYPE_PRIKAZA: TIntegerField;
-    TablePrikazuStringField: TStringField;
-    TablePrikazuField: TStringField;
-    TablePrikazuField2: TStringField;
     DataSourcePrikazu: TDataSource;
     DataSourceZastrahLica: TDataSource;
     TableZastrahLica: TTable;

@@ -39,10 +39,10 @@ type
     Button5: TButton;
     Label6: TLabel;
     DBGrid5: TDBGrid;
-    StrahComboBox: TDBLookupComboBox;
-    StrahoDataSource: TDataSource;
-    StrahTable: TTable;
-    strahoQuery: TQuery;
+    JobComboBox: TDBLookupComboBox;
+    JobDataSource: TDataSource;
+    JobTable: TTable;
+    jobQuery: TQuery;
     strahovDataSource: TDataSource;
     DBGrid6: TDBGrid;
     Label7: TLabel;
@@ -52,6 +52,7 @@ type
     StrahDataSource: TDataSource;
     LicaFondaQuery: TQuery;
     LicaFondaDataSource: TDataSource;
+    Label9: TLabel;
     procedure FormOnShow(Sender: TObject);
     procedure FormOnHide(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -107,16 +108,16 @@ end;
 
 procedure TOtchetForm.Button5Click(Sender: TObject);
 begin
-strahoQuery.Active := false;
-strahoQuery.ParamByName('p1').Value:= strahComboBox.Text;
-strahoQuery.Active := true;
+JobQuery.Active := false;
+JobQuery.ParamByName('p1').Value:= JobComboBox.Text;
+JobQuery.Active := true;
 end;
 
 procedure TOtchetForm.FormOnHide(Sender: TObject);
 begin
 NameFirmTable.Close();
 LicoFondaTable.Close();
-strahTable.Close();
+JobTable.Close();
 ZastrahLicaQuery.Active := False;
 SotrQuery.Active := False;
 end;
@@ -125,7 +126,7 @@ procedure TOtchetForm.FormOnShow(Sender: TObject);
 begin
 NameFirmTable.Open();
 LicoFondaTable.Open();
-strahTable.Open();
+JobTable.Open();
 end;
 
 end.

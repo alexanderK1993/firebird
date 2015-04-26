@@ -1,10 +1,10 @@
 object FSpisokFirm: TFSpisokFirm
-  Left = 174
-  Top = 607
+  Left = 308
+  Top = 333
   BorderStyle = bsToolWindow
   Caption = #1057#1087#1080#1089#1086#1082' '#1092#1080#1088#1084
-  ClientHeight = 294
-  ClientWidth = 546
+  ClientHeight = 202
+  ClientWidth = 505
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

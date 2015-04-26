@@ -1,9 +1,10 @@
 object FJob: TFJob
-  Left = 118
-  Top = 137
-  Width = 307
-  Height = 366
+  Left = 470
+  Top = 438
+  BorderStyle = bsToolWindow
   Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
+  ClientHeight = 313
+  ClientWidth = 289
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

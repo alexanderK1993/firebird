@@ -1,10 +1,10 @@
 object FLicaFonda: TFLicaFonda
-  Left = 173
-  Top = 444
+  Left = 192
+  Top = 423
   BorderStyle = bsToolWindow
   Caption = #1051#1080#1094#1072' '#1092#1086#1085#1076#1072
-  ClientHeight = 318
-  ClientWidth = 738
+  ClientHeight = 282
+  ClientWidth = 674
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

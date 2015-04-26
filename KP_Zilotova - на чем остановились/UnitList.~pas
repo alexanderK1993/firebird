@@ -52,6 +52,7 @@ type
     StrahDataSource: TDataSource;
     LicaFondaQuery: TQuery;
     LicaFondaDataSource: TDataSource;
+    Label9: TLabel;
     procedure FormOnShow(Sender: TObject);
     procedure FormOnHide(Sender: TObject);
     procedure Button2Click(Sender: TObject);

@@ -1,9 +1,10 @@
 object FZayavka: TFZayavka
-  Left = 159
-  Top = 399
-  Width = 722
-  Height = 243
+  Left = 263
+  Top = 532
+  BorderStyle = bsToolWindow
   Caption = #1047#1072#1103#1074#1082#1072
+  ClientHeight = 217
+  ClientWidth = 708
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

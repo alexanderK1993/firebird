@@ -25,6 +25,9 @@ type
     TableZastrahLicaDATA_BIRTH_ZASTRAH_LICA: TDateField;
     TableZastrahLicaID_FIRMA: TIntegerField;
     TableZastrahLicaField: TStringField;
+    DataSourceSpisokFirm: TDataSource;
+    TableSpisokFirm: TTable;
+    TableZastrahLicaField2: TStringField;
   private
     { Private declarations }
   public
