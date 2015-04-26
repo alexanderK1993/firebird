@@ -224,8 +224,8 @@ object OtchetForm: TOtchetForm
     Top = 241
     Width = 145
     Height = 21
-    KeyField = 'ID_STRAH'
-    ListField = 'FIO_STRAH'
+    KeyField = 'ID_JOB'
+    ListField = 'NAME_JOB'
     ListSource = JobDataSource
     TabOrder = 13
   end
@@ -393,7 +393,7 @@ object OtchetForm: TOtchetForm
   end
   object JobTable: TTable
     DatabaseName = 'nashchekin'
-    TableName = 'STRAHOVATELI'
+    TableName = 'JOB'
     Left = 761
     Top = 238
   end
