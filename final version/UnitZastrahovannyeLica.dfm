@@ -1,10 +1,10 @@
 object FZastrahovanyeLica: TFZastrahovanyeLica
-  Left = -46
-  Top = 173
+  Left = 54
+  Top = 287
   BorderStyle = bsToolWindow
   Caption = #1047#1072#1089#1090#1088#1072#1093#1086#1074#1072#1085#1085#1099#1077' '#1083#1080#1094#1072
   ClientHeight = 453
-  ClientWidth = 1086
+  ClientWidth = 1091
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
