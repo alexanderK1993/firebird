@@ -1,10 +1,10 @@
 object FVidaniePutevki: TFVidaniePutevki
-  Left = -41
-  Top = 5
+  Left = 325
+  Top = 538
   BorderStyle = bsToolWindow
   Caption = #1042#1099#1076#1072#1085#1085#1099#1077' '#1087#1091#1090#1077#1074#1082#1080
   ClientHeight = 725
-  ClientWidth = 807
+  ClientWidth = 876
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -344,7 +344,6 @@ object FVidaniePutevki: TFVidaniePutevki
       end>
   end
   object TableVidaniePutevki: TTable
-    Active = True
     DatabaseName = 'nashchekin'
     TableName = 'VIDANIE_PUTEVKI'
     Left = 848
@@ -395,7 +394,7 @@ object FVidaniePutevki: TFVidaniePutevki
       LookupDataSet = TableSanatoryi
       LookupKeyFields = 'ID_SANATORIA'
       LookupResultField = 'NAME_SANATORIA'
-      KeyFields = 'ID_VID_PUTEVKI'
+      KeyFields = 'ID_SANATORIA'
       Lookup = True
     end
     object TableVidaniePutevkiField2: TStringField
@@ -404,7 +403,7 @@ object FVidaniePutevki: TFVidaniePutevki
       LookupDataSet = TableZastrahLica
       LookupKeyFields = 'ID_ZASTRAH_LICA'
       LookupResultField = 'FIO_ZASTRAH_LICA'
-      KeyFields = 'ID_VID_PUTEVKI'
+      KeyFields = 'ID_ZASTRAH_LICA'
       Lookup = True
     end
     object TableVidaniePutevkiField3: TStringField
@@ -413,7 +412,7 @@ object FVidaniePutevki: TFVidaniePutevki
       LookupDataSet = TableLicaFonda
       LookupKeyFields = 'ID_LICA'
       LookupResultField = 'FIO_LICA'
-      KeyFields = 'ID_VID_PUTEVKI'
+      KeyFields = 'ID_LICA'
       Lookup = True
     end
   end

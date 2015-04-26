@@ -56,7 +56,10 @@ type
     TableVidaniePutevkiField3: TStringField;
     DBNavigator2: TDBNavigator;
     DBGrid2: TDBGrid;
-    DataSource1: TDataSource;
+    DBNavigator3: TDBNavigator;
+    DBGrid3: TDBGrid;
+    DBNavigator4: TDBNavigator;
+    DBGrid4: TDBGrid;
     Table1: TTable;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;
@@ -66,8 +69,13 @@ type
     StringField3: TStringField;
     DateField2: TDateField;
     IntegerField3: TIntegerField;
-    DBNavigator3: TDBNavigator;
-    DBGrid3: TDBGrid;
+    TableZastrahLicaField: TStringField;
+    TableZastrahLicaField2: TStringField;
+    DataSource1: TDataSource;
+    TableJob: TTable;
+    DataSourceJob: TDataSource;
+    DataSourceSpisokFirm: TDataSource;
+    TableSpisokFirm: TTable;
     DataSource2: TDataSource;
     Table2: TTable;
     IntegerField4: TIntegerField;
@@ -78,16 +86,23 @@ type
     StringField6: TStringField;
     DateField4: TDateField;
     IntegerField6: TIntegerField;
-    DBNavigator4: TDBNavigator;
-    DBGrid4: TDBGrid;
-    Table3: TTable;
-    IntegerField7: TIntegerField;
-    StringField7: TStringField;
-    StringField8: TStringField;
-    StringField9: TStringField;
-    StringField10: TStringField;
-    IntegerField8: TIntegerField;
-    DataSource3: TDataSource;
+    TableLicaFondaField: TStringField;
+    TableLicaFondaID: TIntegerField;
+    Table4: TTable;
+    DataSource4: TDataSource;
+    DataSourceZayavka: TDataSource;
+    TableZayavka: TTable;
+    Table5: TTable;
+    IntegerField9: TIntegerField;
+    StringField11: TStringField;
+    StringField12: TStringField;
+    StringField13: TStringField;
+    StringField14: TStringField;
+    IntegerField10: TIntegerField;
+    TableSanatoryiField: TStringField;
+    DataSource5: TDataSource;
+    DataSourceSpisokCountry: TDataSource;
+    TableSpisokCountry: TTable;
   private
     { Private declarations }
   public

@@ -1,10 +1,10 @@
 object FVidaniePutevki: TFVidaniePutevki
-  Left = 165
-  Top = 223
+  Left = 234
+  Top = 117
   BorderStyle = bsToolWindow
   Caption = #1042#1099#1076#1072#1085#1085#1099#1077' '#1087#1091#1090#1077#1074#1082#1080
-  ClientHeight = 722
-  ClientWidth = 929
+  ClientHeight = 725
+  ClientWidth = 876
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -284,7 +284,7 @@ object FVidaniePutevki: TFVidaniePutevki
     Top = 561
     Width = 800
     Height = 25
-    DataSource = DataSource3
+    DataSource = DataSource5
     TabOrder = 6
   end
   object DBGrid4: TDBGrid
@@ -292,7 +292,7 @@ object FVidaniePutevki: TFVidaniePutevki
     Top = 592
     Width = 804
     Height = 129
-    DataSource = DataSource3
+    DataSource = DataSource5
     TabOrder = 7
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -344,11 +344,10 @@ object FVidaniePutevki: TFVidaniePutevki
       end>
   end
   object TableVidaniePutevki: TTable
-    Active = True
     DatabaseName = 'nashchekin'
     TableName = 'VIDANIE_PUTEVKI'
     Left = 848
-    Top = 176
+    Top = 144
     object TableVidaniePutevkiID_VID_PUTEVKI: TIntegerField
       FieldName = 'ID_VID_PUTEVKI'
       Required = True
@@ -395,7 +394,7 @@ object FVidaniePutevki: TFVidaniePutevki
       LookupDataSet = TableSanatoryi
       LookupKeyFields = 'ID_SANATORIA'
       LookupResultField = 'NAME_SANATORIA'
-      KeyFields = 'ID_VID_PUTEVKI'
+      KeyFields = 'ID_SANATORIA'
       Lookup = True
     end
     object TableVidaniePutevkiField2: TStringField
@@ -404,7 +403,7 @@ object FVidaniePutevki: TFVidaniePutevki
       LookupDataSet = TableZastrahLica
       LookupKeyFields = 'ID_ZASTRAH_LICA'
       LookupResultField = 'FIO_ZASTRAH_LICA'
-      KeyFields = 'ID_VID_PUTEVKI'
+      KeyFields = 'ID_ZASTRAH_LICA'
       Lookup = True
     end
     object TableVidaniePutevkiField3: TStringField
@@ -413,14 +412,14 @@ object FVidaniePutevki: TFVidaniePutevki
       LookupDataSet = TableLicaFonda
       LookupKeyFields = 'ID_LICA'
       LookupResultField = 'FIO_LICA'
-      KeyFields = 'ID_VID_PUTEVKI'
+      KeyFields = 'ID_LICA'
       Lookup = True
     end
   end
   object DataSourceVydaniePutevki: TDataSource
     DataSet = TableVidaniePutevki
     Left = 816
-    Top = 176
+    Top = 144
   end
   object TableSanatoryi: TTable
     Active = True
@@ -545,18 +544,12 @@ object FVidaniePutevki: TFVidaniePutevki
       Required = True
     end
   end
-  object DataSource1: TDataSource
-    DataSet = Table1
-    Left = 816
-    Top = 256
-  end
   object Table1: TTable
     Active = True
     DatabaseName = 'nashchekin'
-    MasterSource = DataSourceVydaniePutevki
     TableName = 'ZASTRAHOVANIE_LICA'
     Left = 848
-    Top = 256
+    Top = 240
     object IntegerField1: TIntegerField
       FieldName = 'ID_ZASTRAH_LICA'
       Required = True
@@ -587,20 +580,68 @@ object FVidaniePutevki: TFVidaniePutevki
       FieldName = 'ID_FIRMA'
       Required = True
     end
+    object TableZastrahLicaField: TStringField
+      FieldKind = fkLookup
+      FieldName = #1044#1086#1083#1078#1085#1086#1089#1090#1100
+      LookupDataSet = TableJob
+      LookupKeyFields = 'ID_JOB'
+      LookupResultField = 'NAME_JOB'
+      KeyFields = 'ID_JOB'
+      Lookup = True
+    end
+    object TableZastrahLicaField2: TStringField
+      FieldKind = fkLookup
+      FieldName = #1060#1080#1088#1084#1072
+      LookupDataSet = TableSpisokFirm
+      LookupKeyFields = 'ID_FIRMA'
+      LookupResultField = 'NAME_FIRMA'
+      KeyFields = 'ID_FIRMA'
+      Lookup = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = Table1
+    Left = 816
+    Top = 240
+  end
+  object TableJob: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    MasterSource = DataSource1
+    TableName = 'JOB'
+    Left = 848
+    Top = 304
+  end
+  object DataSourceJob: TDataSource
+    DataSet = TableJob
+    Left = 816
+    Top = 304
+  end
+  object DataSourceSpisokFirm: TDataSource
+    DataSet = TableSpisokFirm
+    Left = 816
+    Top = 272
+  end
+  object TableSpisokFirm: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    MasterSource = DataSource1
+    TableName = 'SPISOK_FIRM'
+    Left = 848
+    Top = 272
   end
   object DataSource2: TDataSource
     DataSet = Table2
-    Left = 840
-    Top = 488
+    Left = 816
+    Top = 424
   end
   object Table2: TTable
     Active = True
     AutoRefresh = True
     DatabaseName = 'nashchekin'
-    MasterSource = DataSourceVydaniePutevki
     TableName = 'LICA_FONDA'
-    Left = 856
-    Top = 520
+    Left = 848
+    Top = 424
     object IntegerField4: TIntegerField
       FieldName = 'ID_FIRMA'
       Required = True
@@ -631,40 +672,106 @@ object FVidaniePutevki: TFVidaniePutevki
       FieldName = 'ID_ZAYAVKI'
       Required = True
     end
+    object TableLicaFondaField: TStringField
+      FieldKind = fkLookup
+      FieldName = #1060#1080#1088#1084#1072
+      LookupDataSet = Table4
+      LookupKeyFields = 'ID_FIRMA'
+      LookupResultField = 'NAME_FIRMA'
+      KeyFields = 'ID_FIRMA'
+      Lookup = True
+    end
+    object TableLicaFondaID: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'ID '#1079#1072#1103#1074#1082#1080
+      LookupDataSet = TableZayavka
+      LookupKeyFields = 'ID_ZAYAVKI'
+      LookupResultField = 'ID_ZAYAVKI'
+      KeyFields = 'ID_ZAYAVKI'
+      Lookup = True
+    end
   end
-  object Table3: TTable
+  object Table4: TTable
+    Active = True
     DatabaseName = 'nashchekin'
-    MasterSource = DataSourceVydaniePutevki
-    TableName = 'SANATORIY'
+    MasterSource = DataSource2
+    TableName = 'SPISOK_FIRM'
+    Left = 848
+    Top = 496
+  end
+  object DataSource4: TDataSource
+    DataSet = Table4
     Left = 816
-    Top = 656
-    object IntegerField7: TIntegerField
+    Top = 496
+  end
+  object DataSourceZayavka: TDataSource
+    DataSet = TableZayavka
+    Left = 816
+    Top = 456
+  end
+  object TableZayavka: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    MasterSource = DataSource2
+    TableName = 'ZAYAVKA'
+    Left = 848
+    Top = 456
+  end
+  object Table5: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    TableName = 'SANATORIY'
+    Left = 824
+    Top = 608
+    object IntegerField9: TIntegerField
       FieldName = 'ID_SANATORIA'
       Required = True
     end
-    object StringField7: TStringField
+    object StringField11: TStringField
       FieldName = 'NAME_SANATORIA'
     end
-    object StringField8: TStringField
+    object StringField12: TStringField
       FieldName = 'USL_PROG'
       Size = 50
     end
-    object StringField9: TStringField
+    object StringField13: TStringField
       FieldName = 'ADRES_SANATORIA'
       Size = 30
     end
-    object StringField10: TStringField
+    object StringField14: TStringField
       FieldName = 'TEL_SANATORIA'
       Size = 15
     end
-    object IntegerField8: TIntegerField
+    object IntegerField10: TIntegerField
       FieldName = 'ID_TYPE_COUNTRY'
       Required = True
     end
+    object TableSanatoryiField: TStringField
+      FieldKind = fkLookup
+      FieldName = #1057#1090#1088#1072#1085#1072
+      LookupDataSet = TableSpisokCountry
+      LookupKeyFields = 'ID_TYPE_COUNTRY'
+      LookupResultField = 'NAME_COUNTRY'
+      KeyFields = 'ID_SANATORIA'
+      Lookup = True
+    end
   end
-  object DataSource3: TDataSource
-    DataSet = Table3
-    Left = 848
-    Top = 656
+  object DataSource5: TDataSource
+    DataSet = Table5
+    Left = 856
+    Top = 616
+  end
+  object DataSourceSpisokCountry: TDataSource
+    DataSet = TableSpisokCountry
+    Left = 856
+    Top = 640
+  end
+  object TableSpisokCountry: TTable
+    Active = True
+    DatabaseName = 'nashchekin'
+    MasterSource = DataSource5
+    TableName = 'SPISOK_COUNTRY'
+    Left = 824
+    Top = 640
   end
 end

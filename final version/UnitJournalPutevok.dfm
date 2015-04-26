@@ -1,10 +1,10 @@
 object FJournalPutevok: TFJournalPutevok
-  Left = 60
-  Top = 323
+  Left = 245
+  Top = 228
   BorderStyle = bsToolWindow
   Caption = #1046#1091#1088#1085#1072#1083' '#1087#1091#1090#1077#1074#1086#1082
   ClientHeight = 564
-  ClientWidth = 683
+  ClientWidth = 858
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -375,6 +375,7 @@ object FJournalPutevok: TFJournalPutevok
     Active = True
     AutoRefresh = True
     DatabaseName = 'nashchekin'
+    MasterSource = DataSourceJournal
     TableName = 'LICA_FONDA'
     Left = 688
     Top = 256
@@ -456,6 +457,7 @@ object FJournalPutevok: TFJournalPutevok
   object Table3: TTable
     Active = True
     DatabaseName = 'nashchekin'
+    MasterSource = DataSourceJournal
     TableName = 'ZAYAVKA'
     Left = 728
     Top = 384
