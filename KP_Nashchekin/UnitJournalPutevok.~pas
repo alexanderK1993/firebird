@@ -1,0 +1,112 @@
+unit UnitJournalPutevok;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, ExtCtrls, DBCtrls, Grids, DBGrids;
+
+type
+  TFJournalPutevok = class(TForm)
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    TableJournal: TTable;
+    DataSourceJournal: TDataSource;
+    DataSourceZayavka: TDataSource;
+    TableZayavka: TTable;
+    TableZayavkaID_ZAYAVKI: TIntegerField;
+    TableZayavkaID_STRAH: TIntegerField;
+    TableZayavkaDATA_ZAYAVKI: TDateField;
+    TableZayavkaID_ZASTRAH_LICA: TIntegerField;
+    TableZayavkaID_SANATORIA: TIntegerField;
+    TableZayavkaSOD_ZAYAVKI: TStringField;
+    TableLicaFonda: TTable;
+    TableLicaFondaID_FIRMA: TIntegerField;
+    TableLicaFondaID_LICA: TIntegerField;
+    TableLicaFondaFIO_LICA: TStringField;
+    TableLicaFondaDATA_PRIN_WORK: TDateField;
+    TableLicaFondaADRES_LICA: TStringField;
+    TableLicaFondaTEL_LICA: TStringField;
+    TableLicaFondaDATA_BIRTH_LICA: TDateField;
+    TableLicaFondaID_ZAYAVKI: TIntegerField;
+    DataSourceLicaFonda: TDataSource;
+    TableJournalID_PUTEVKI: TIntegerField;
+    TableJournalDATA_ZAPISI: TDateField;
+    TableJournalNAME_FONDA: TStringField;
+    TableJournalSOD_PUTEVKI: TStringField;
+    TableJournalID_LICA: TIntegerField;
+    TableJournalID_ZAYAVKI: TIntegerField;
+    TableJournalField: TStringField;
+    TableJournalID: TIntegerField;
+    DataSource1: TDataSource;
+    Table1: TTable;
+    IntegerField1: TIntegerField;
+    IntegerField2: TIntegerField;
+    StringField1: TStringField;
+    DateField1: TDateField;
+    StringField2: TStringField;
+    StringField3: TStringField;
+    DateField2: TDateField;
+    IntegerField3: TIntegerField;
+    TableLicaFondaField: TStringField;
+    TableLicaFondaID: TIntegerField;
+    TableSpisokFirm: TTable;
+    DataSourceSpisokFirm: TDataSource;
+    DataSource2: TDataSource;
+    Table2: TTable;
+    DBGrid2: TDBGrid;
+    DBNavigator2: TDBNavigator;
+    DBGrid3: TDBGrid;
+    DBNavigator3: TDBNavigator;
+    Table3: TTable;
+    IntegerField4: TIntegerField;
+    IntegerField5: TIntegerField;
+    DateField3: TDateField;
+    IntegerField6: TIntegerField;
+    IntegerField7: TIntegerField;
+    StringField4: TStringField;
+    TableZayavkaField: TStringField;
+    TableZayavkaField2: TStringField;
+    TableZayavkaField3: TStringField;
+    DataSource3: TDataSource;
+    TableStrahovateli: TTable;
+    TableStrahovateliID_STRAH: TIntegerField;
+    TableStrahovateliFIO_STRAH: TStringField;
+    TableStrahovateliDATA_PRIN_WORK: TDateField;
+    TableStrahovateliADRES_STRAH: TStringField;
+    TableStrahovateliTEL_STRAH: TStringField;
+    TableStrahovateliDATA_BIRTH_STRAH: TDateField;
+    TableStrahovateliID_FIRMA: TIntegerField;
+    DataSourceStrahovateli: TDataSource;
+    DataSourceZastrahLica: TDataSource;
+    TableZastrahLica: TTable;
+    TableZastrahLicaID_ZASTRAH_LICA: TIntegerField;
+    TableZastrahLicaID_JOB: TIntegerField;
+    TableZastrahLicaFIO_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaDATA_PRIN_WORK: TDateField;
+    TableZastrahLicaADRES_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaTEL_ZASTRAH_LICA: TStringField;
+    TableZastrahLicaDATA_BIRTH_ZASTRAH_LICA: TDateField;
+    TableZastrahLicaID_FIRMA: TIntegerField;
+    TableSanatoryi: TTable;
+    TableSanatoryiID_SANATORIA: TIntegerField;
+    TableSanatoryiNAME_SANATORIA: TStringField;
+    TableSanatoryiUSL_PROG: TStringField;
+    TableSanatoryiADRES_SANATORIA: TStringField;
+    TableSanatoryiTEL_SANATORIA: TStringField;
+    TableSanatoryiID_TYPE_COUNTRY: TIntegerField;
+    DataSourceSanatoryi: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FJournalPutevok: TFJournalPutevok;
+
+implementation
+
+{$R *.dfm}
+
+end.
