@@ -4,7 +4,7 @@ object FLicaFonda: TFLicaFonda
   BorderStyle = bsToolWindow
   Caption = #1051#1080#1094#1072' '#1092#1086#1085#1076#1072
   ClientHeight = 283
-  ClientWidth = 676
+  ClientWidth = 752
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -65,12 +65,6 @@ object FLicaFonda: TFLicaFonda
       end
       item
         Expanded = False
-        FieldName = 'ID_ZAYAVKI'
-        Title.Caption = 'ID '#1079#1072#1103#1074#1082#1080
-        Visible = False
-      end
-      item
-        Expanded = False
         FieldName = 'ID_FIRMA'
         Title.Caption = 'ID '#1092#1080#1088#1084#1099
         Visible = False
@@ -78,11 +72,6 @@ object FLicaFonda: TFLicaFonda
       item
         Expanded = False
         FieldName = #1060#1080#1088#1084#1072
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'ID '#1079#1072#1103#1074#1082#1080
         Visible = True
       end>
   end
@@ -178,10 +167,6 @@ object FLicaFonda: TFLicaFonda
     object TableLicaFondaDATA_BIRTH_LICA: TDateField
       FieldName = 'DATA_BIRTH_LICA'
     end
-    object TableLicaFondaID_ZAYAVKI: TIntegerField
-      FieldName = 'ID_ZAYAVKI'
-      Required = True
-    end
     object TableLicaFondaField: TStringField
       FieldKind = fkLookup
       FieldName = #1060#1080#1088#1084#1072
@@ -189,15 +174,6 @@ object FLicaFonda: TFLicaFonda
       LookupKeyFields = 'ID_FIRMA'
       LookupResultField = 'NAME_FIRMA'
       KeyFields = 'ID_FIRMA'
-      Lookup = True
-    end
-    object TableLicaFondaID: TIntegerField
-      FieldKind = fkLookup
-      FieldName = 'ID '#1079#1072#1103#1074#1082#1080
-      LookupDataSet = TableZayavka
-      LookupKeyFields = 'ID_ZAYAVKI'
-      LookupResultField = 'ID_ZAYAVKI'
-      KeyFields = 'ID_ZAYAVKI'
       Lookup = True
     end
   end
@@ -226,5 +202,11 @@ object FLicaFonda: TFLicaFonda
     TableName = 'ZAYAVKA'
     Left = 704
     Top = 104
+  end
+  object Table1: TTable
+    DatabaseName = 'nashchekin'
+    TableName = 'LICA_FONDA'
+    Left = 712
+    Top = 16
   end
 end

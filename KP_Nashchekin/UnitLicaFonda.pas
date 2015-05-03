@@ -23,11 +23,10 @@ type
     TableLicaFondaADRES_LICA: TStringField;
     TableLicaFondaTEL_LICA: TStringField;
     TableLicaFondaDATA_BIRTH_LICA: TDateField;
-    TableLicaFondaID_ZAYAVKI: TIntegerField;
     TableLicaFondaField: TStringField;
     DataSourceZayavka: TDataSource;
     TableZayavka: TTable;
-    TableLicaFondaID: TIntegerField;
+    Table1: TTable;
   private
     { Private declarations }
   public

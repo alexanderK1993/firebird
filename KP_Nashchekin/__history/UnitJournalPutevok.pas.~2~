@@ -47,6 +47,7 @@ type
     StringField3: TStringField;
     DateField2: TDateField;
     TableLicaFondaField: TStringField;
+    TableLicaFondaID: TIntegerField;
     TableSpisokFirm: TTable;
     DataSourceSpisokFirm: TDataSource;
     DataSource2: TDataSource;

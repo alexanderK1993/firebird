@@ -28,6 +28,7 @@ type
     TableLicaFondaADRES_LICA: TStringField;
     TableLicaFondaTEL_LICA: TStringField;
     TableLicaFondaDATA_BIRTH_LICA: TDateField;
+    TableLicaFondaID_ZAYAVKI: TIntegerField;
     DataSourceLicaFonda: TDataSource;
     TableJournalID_PUTEVKI: TIntegerField;
     TableJournalDATA_ZAPISI: TDateField;
@@ -46,7 +47,9 @@ type
     StringField2: TStringField;
     StringField3: TStringField;
     DateField2: TDateField;
+    IntegerField3: TIntegerField;
     TableLicaFondaField: TStringField;
+    TableLicaFondaID: TIntegerField;
     TableSpisokFirm: TTable;
     DataSourceSpisokFirm: TDataSource;
     DataSource2: TDataSource;

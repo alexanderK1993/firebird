@@ -4,7 +4,7 @@ object FVidaniePutevki: TFVidaniePutevki
   BorderStyle = bsToolWindow
   Caption = #1042#1099#1076#1072#1085#1085#1099#1077' '#1087#1091#1090#1077#1074#1082#1080
   ClientHeight = 756
-  ClientWidth = 804
+  ClientWidth = 876
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -259,7 +259,7 @@ object FVidaniePutevki: TFVidaniePutevki
     Left = 1
     Top = 584
     Width = 805
-    Height = 177
+    Height = 137
     DataSource = DataSource5
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET

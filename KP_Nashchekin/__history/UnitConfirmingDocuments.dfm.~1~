@@ -412,6 +412,10 @@ object FConfirmDocuments: TFConfirmDocuments
     object TableLicaFondaDATA_BIRTH_LICA: TDateField
       FieldName = 'DATA_BIRTH_LICA'
     end
+    object TableLicaFondaID_ZAYAVKI: TIntegerField
+      FieldName = 'ID_ZAYAVKI'
+      Required = True
+    end
   end
   object Table2: TTable
     Active = True

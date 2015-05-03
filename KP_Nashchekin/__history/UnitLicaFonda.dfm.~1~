@@ -177,7 +177,6 @@ object FLicaFonda: TFLicaFonda
     end
   end
   object TableSpisokFirm: TTable
-    Active = True
     DatabaseName = 'nashchekin'
     MasterSource = DataSourceLicaFonda
     TableName = 'SPISOK_FIRM'
@@ -195,11 +194,16 @@ object FLicaFonda: TFLicaFonda
     Top = 104
   end
   object TableZayavka: TTable
-    Active = True
     DatabaseName = 'nashchekin'
     MasterSource = DataSourceLicaFonda
     TableName = 'ZAYAVKA'
     Left = 704
     Top = 104
+  end
+  object Table1: TTable
+    DatabaseName = 'nashchekin'
+    TableName = 'LICA_FONDA'
+    Left = 712
+    Top = 16
   end
 end

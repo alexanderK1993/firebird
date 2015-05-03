@@ -226,7 +226,6 @@ object FJournalPutevok: TFJournalPutevok
     TabOrder = 5
   end
   object TableJournal: TTable
-    Active = True
     DatabaseName = 'nashchekin'
     TableName = 'JOURNAL_PUTEVOK'
     Left = 736
@@ -357,7 +356,6 @@ object FJournalPutevok: TFJournalPutevok
     Top = 224
   end
   object Table1: TTable
-    Active = True
     AutoRefresh = True
     DatabaseName = 'nashchekin'
     MasterSource = DataSourceJournal
@@ -397,6 +395,15 @@ object FJournalPutevok: TFJournalPutevok
       LookupKeyFields = 'ID_FIRMA'
       LookupResultField = 'NAME_FIRMA'
       KeyFields = 'ID_FIRMA'
+      Lookup = True
+    end
+    object TableLicaFondaID: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'ID '#1079#1072#1103#1074#1082#1080
+      LookupDataSet = Table2
+      LookupKeyFields = 'ID_ZAYAVKI'
+      LookupResultField = 'ID_ZAYAVKI'
+      KeyFields = 'ID_ZAYAVKI'
       Lookup = True
     end
   end

@@ -140,6 +140,7 @@ type
     StringField14: TStringField;
     IntegerField13: TIntegerField;
     DataSource7: TDataSource;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -153,4 +154,9 @@ implementation
 
 {$R *.dfm}
 
-end.
+eprocedure TFVidaniePutevki.FormCreate(Sender: TObject);
+begin
+
+end;
+
+nd.

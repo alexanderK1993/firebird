@@ -207,7 +207,6 @@ object FConfirmDocuments: TFConfirmDocuments
     TabOrder = 5
   end
   object TableConfirmingDocuments: TTable
-    Active = True
     DatabaseName = 'nashchekin'
     TableName = 'CONFIRMING_DOCUMENTS'
     Left = 776
@@ -379,7 +378,6 @@ object FConfirmDocuments: TFConfirmDocuments
     Top = 136
   end
   object TableLicaFonda: TTable
-    Active = True
     AutoRefresh = True
     DatabaseName = 'nashchekin'
     MasterSource = DataSourceConfirmingDocuments

@@ -41,6 +41,7 @@ type
     TableLicaFondaADRES_LICA: TStringField;
     TableLicaFondaTEL_LICA: TStringField;
     TableLicaFondaDATA_BIRTH_LICA: TDateField;
+    TableLicaFondaID_ZAYAVKI: TIntegerField;
     TableConfirmingDocumentsID_DOCUMENTA: TIntegerField;
     TableConfirmingDocumentsSOD_DOCUMENTA: TStringField;
     TableConfirmingDocumentsDATA_POD_DOCUMENTA: TDateField;
