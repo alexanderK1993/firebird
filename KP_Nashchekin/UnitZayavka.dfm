@@ -1,6 +1,6 @@
 object FZayavka: TFZayavka
-  Left = -4
-  Top = 162
+  Left = -116
+  Top = 492
   BorderStyle = bsToolWindow
   Caption = #1047#1072#1103#1074#1082#1072
   ClientHeight = 638
