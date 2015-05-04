@@ -1,10 +1,10 @@
 object FVidaniePutevki: TFVidaniePutevki
-  Left = 339
-  Top = 135
+  Left = 236
+  Top = 154
   BorderStyle = bsToolWindow
   Caption = #1042#1099#1076#1072#1085#1085#1099#1077' '#1087#1091#1090#1077#1074#1082#1080
   ClientHeight = 756
-  ClientWidth = 868
+  ClientWidth = 804
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -256,7 +256,7 @@ object FVidaniePutevki: TFVidaniePutevki
     TabOrder = 5
   end
   object DBGrid4: TDBGrid
-    Left = -215
+    Left = 1
     Top = 584
     Width = 805
     Height = 177
@@ -611,15 +611,14 @@ object FVidaniePutevki: TFVidaniePutevki
     Top = 456
   end
   object Query1: TQuery
-    CachedUpdates = True
-    AutoRefresh = True
+    Active = True
     DatabaseName = 'nashchekin'
     SQL.Strings = (
       'Select ZASTRAHOVANIE_LICA.ID_ZASTRAH_LICA,FIO_ZASTRAH_LICA'
       'from ZASTRAHOVANIE_LICA,zayavka,JOURNAL_PUTEVOK'
       'where ZASTRAHOVANIE_LICA.ID_ZASTRAH_LICA='
-      'ZAYAVKA.ID_ZASTRAH_LICA'
-      '')
+      'ZAYAVKA.ID_ZASTRAH_LICA and'
+      'zayavka.ID_ZAYAVKI=JOURNAL_PUTEVOK.ID_ZAYAVKI')
     Left = 816
     Top = 16
   end

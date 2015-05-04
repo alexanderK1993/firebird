@@ -5,7 +5,11 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes,
    Graphics, Controls, Forms,
-  Dialogs, Menus, DB, DBTables,UnitList, StdCtrls ,UnitLicaFonda;
+  Dialogs, Menus, DB, DBTables, UnitClient, UnitAvto,
+   UnitPolis,UnitCompany,UnitMotor,
+  UnitCarcass,UnitManager,UnitDiagnost, UnitSpecI, UnitSpecD,
+  UnitRequest,UnitLook,UnitCalc,
+  UnitContract,UnitList, StdCtrls ,UnitLicaFonda;
 
 type
   TMainForm = class(TForm)
@@ -43,6 +47,14 @@ type
     procedure LicaFondaClick(Sender: TObject);
     procedure PrikazyClick(Sender: TObject);
     procedure sanatoryiClick(Sender: TObject);
+    procedure miManagerClick(Sender: TObject);
+    procedure miDiagnostClick(Sender: TObject);
+    procedure miSpecInsClick(Sender: TObject);
+    procedure miSpecDogClick(Sender: TObject);
+    procedure miRequestClick(Sender: TObject);
+    procedure miLookClick(Sender: TObject);
+    procedure miCalcClick(Sender: TObject);
+    procedure miContractClick(Sender: TObject);
     procedure miReportClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
@@ -69,6 +81,10 @@ begin
    FLicaFonda.Show();
 end;
 
+procedure TMainForm.miCalcClick(Sender: TObject);
+begin
+FCalculator.Show();
+end;
 
 procedure TMainForm.sanatoryiClick(Sender: TObject);
 begin
@@ -90,6 +106,26 @@ begin
 FLicaFonda.Show();
 end;
 
+procedure TMainForm.miContractClick(Sender: TObject);
+begin
+FContract.Show();
+end;
+
+procedure TMainForm.miDiagnostClick(Sender: TObject);
+begin
+FDiagnost.Show();
+end;
+
+procedure TMainForm.miLookClick(Sender: TObject);
+begin
+FInspection.Show();
+end;
+
+procedure TMainForm.miManagerClick(Sender: TObject);
+begin
+FManager.Show();
+end;
+
 procedure TMainForm.PrikazyClick(Sender: TObject);
 begin
 FPrikazu.Show();
@@ -105,6 +141,20 @@ begin
 OtchetForm.Show();
 end;
 
+procedure TMainForm.miRequestClick(Sender: TObject);
+begin
+FRequest.Show();
+end;
+
+procedure TMainForm.miSpecDogClick(Sender: TObject);
+begin
+FormSpecD.Show();
+end;
+
+procedure TMainForm.miSpecInsClick(Sender: TObject);
+begin
+  FormSpecI.Show();
+end;
 
 procedure TMainForm.zayavkaClick(Sender: TObject);
 begin
