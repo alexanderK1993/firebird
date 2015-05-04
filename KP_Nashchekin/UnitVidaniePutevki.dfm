@@ -4,7 +4,7 @@ object FVidaniePutevki: TFVidaniePutevki
   BorderStyle = bsToolWindow
   Caption = #1042#1099#1076#1072#1085#1085#1099#1077' '#1087#1091#1090#1077#1074#1082#1080
   ClientHeight = 756
-  ClientWidth = 868
+  ClientWidth = 810
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -256,9 +256,9 @@ object FVidaniePutevki: TFVidaniePutevki
     TabOrder = 5
   end
   object DBGrid4: TDBGrid
-    Left = -215
+    Left = 1
     Top = 584
-    Width = 805
+    Width = 800
     Height = 177
     DataSource = DataSource5
     TabOrder = 6
@@ -302,7 +302,7 @@ object FVidaniePutevki: TFVidaniePutevki
         Expanded = False
         FieldName = 'SOD_ZAYAVKI'
         Title.Caption = #1089#1086#1076#1077#1088#1078#1072#1085#1080#1077' '#1079#1072#1103#1074#1082#1080
-        Width = 135
+        Width = 200
         Visible = True
       end
       item
@@ -616,7 +616,7 @@ object FVidaniePutevki: TFVidaniePutevki
     DatabaseName = 'nashchekin'
     SQL.Strings = (
       'Select ZASTRAHOVANIE_LICA.ID_ZASTRAH_LICA,FIO_ZASTRAH_LICA'
-      'from ZASTRAHOVANIE_LICA,zayavka,JOURNAL_PUTEVOK'
+      'from ZASTRAHOVANIE_LICA,zayavka'
       'where ZASTRAHOVANIE_LICA.ID_ZASTRAH_LICA='
       'ZAYAVKA.ID_ZASTRAH_LICA'
       '')
