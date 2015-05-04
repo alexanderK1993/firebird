@@ -3,8 +3,8 @@ object FStrahovateli: TFStrahovateli
   Top = 442
   BorderStyle = bsToolWindow
   Caption = #1057#1090#1088#1072#1093#1086#1074#1072#1090#1077#1083#1080
-  ClientHeight = 401
-  ClientWidth = 872
+  ClientHeight = 409
+  ClientWidth = 875
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
