@@ -1,8 +1,8 @@
 object OtchetForm: TOtchetForm
-  Left = 139
-  Top = 141
+  Left = 190
+  Top = 220
   Width = 934
-  Height = 607
+  Height = 563
   Caption = #1054#1090#1095#1077#1090
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
